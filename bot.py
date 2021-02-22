@@ -36,10 +36,10 @@ def start(bot: Bot, update: Update, context: CallbackContext) -> int:
     # )
 
     reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything']]
-    bot.send_animation(
-    chat_id=-1001613440161,
-    animation= giflink,
-    )
+    # bot.send_animation(
+    # chat_id=-1001613440161,
+    # animation= giflink,
+    # )
 
     # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
     update.message.reply_text(

@@ -26,7 +26,7 @@ from telegram.ext import (
     ConversationHandler,
     CallbackContext,
 )
-# PORT = int(os.environ.get('PORT', 8443))
+PORT = int(os.environ.get('PORT', 8443))
 TOKEN = '1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY'
 
 # Enable logging
@@ -279,7 +279,7 @@ def main():
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
-    updater = Updater(TOKEN, use_context=True)
+    updater = Updater(token = TOKEN, use_context=True)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
@@ -313,10 +313,10 @@ def main():
     # log all errors
     dp.add_error_handler(error)
 
-    updater.bot.deleteWebhook()
+    #updater.bot.deleteWebhook()
 
     # Start the Bot
-    updater.start_polling()
+    #updater.start_polling()
 
 
 
@@ -325,7 +325,7 @@ def main():
                           port = PORT,
                           url_path= TOKEN)
     # updater.bot.set_webhook(url=settings.WEBHOOK_URL)
-    updater.bot.set_webhook('https://hungrylehbot.herokuapp.com/' + TOKEN)
+    updater.bot.setwebhook('https://hungrylehbot.herokuapp.com/' + TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since

@@ -185,3 +185,11 @@
 2021-02-22 16:39:53,920 - __main__ - INFO - Xuan Ze needs ideas
 2021-02-22 16:39:55,909 - __main__ - INFO - Xuan Ze selected West.
 2021-02-22 16:39:58,809 - __main__ - INFO - Xuan Ze is exiting
+2021-02-22 16:48:34,135 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:48:45,136 - __main__ - INFO - User Xuan Ze canceled the conversation.
+2021-02-22 16:51:38,488 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:52:49,670 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-22 16:52:50,866 - __main__ - INFO - Xuan Ze selected West.
+2021-02-22 16:52:54,039 - __main__ - INFO - Xuan Ze is exiting
+2021-02-22 17:06:42,037 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 17:06:52,413 - __main__ - INFO - User Xuan Ze canceled the conversation.

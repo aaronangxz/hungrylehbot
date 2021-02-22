@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 MYSTATE, ACTION, PHOTO, LOCATION, BIO = range(5)
 
 def start(update: Update, context: CallbackContext) -> int:
-    reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Random']]
+    reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything😒']]
     update.message.reply_text(
         'Helloo, this is Patrick.\n'
         'Not sure where to makan?',
@@ -66,10 +66,10 @@ def randomplaces(update: Update, context: CallbackContext) -> int:
     reply_keyboard = [['YES PLS']]
     logger.info("%s selected random.", user.first_name)
     update.message.reply_text(
-        'Indecisive?🤔'
+        'Anything your head🙄🙄'
     )
     update.message.reply_text(
-        'I give you random suggestions ah?',
+        'I anyhow give you suggestions ah, you sure?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
     ) 
     return ACTION
@@ -100,7 +100,7 @@ def places_random(update: Update, context: CallbackContext) -> int:
         reply_markup=ReplyKeyboardRemove(),
     )    
     update.message.reply_text(
-        'Here you go, enjoy😛',
+        'Nah, enjoy😛',
         reply_markup=ReplyKeyboardRemove(),
     )
     return ConversationHandler.END
@@ -213,7 +213,7 @@ def main():
         states={
             MYSTATE: [MessageHandler(Filters.regex('^I NEED IDEAS$'), ideas),
                     MessageHandler(Filters.regex('^Not hungry la$'), Nah),
-                    MessageHandler(Filters.regex('^Random$'), randomplaces)],
+                    MessageHandler(Filters.regex('^Anything$'), randomplaces)],
             ACTION: [MessageHandler(Filters.regex('^Lmao lame$'), ideas),
                     MessageHandler(Filters.regex('^Nice!$'), ending),
                     MessageHandler(Filters.regex('^Central$'), places_central), 

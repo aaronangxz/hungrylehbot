@@ -193,3 +193,7 @@
 2021-02-22 16:52:54,039 - __main__ - INFO - Xuan Ze is exiting
 2021-02-22 17:06:42,037 - apscheduler.scheduler - INFO - Scheduler started
 2021-02-22 17:06:52,413 - __main__ - INFO - User Xuan Ze canceled the conversation.
+2021-02-22 17:15:03,600 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 17:15:37,542 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 17:15:51,328 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-22 17:15:51,329 - apscheduler.scheduler - INFO - Scheduler has been shut down

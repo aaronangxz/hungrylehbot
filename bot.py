@@ -325,7 +325,7 @@ def main():
                           port = PORT,
                           url_path= TOKEN)
     # updater.bot.set_webhook(url=settings.WEBHOOK_URL)
-    updater.bot.setwebhook('https://hungrylehbot.herokuapp.com/' + TOKEN)
+    updater.bot.set_webhook('https://hungrylehbot.herokuapp.com/' + TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since

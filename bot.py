@@ -26,7 +26,7 @@ from telegram.ext import (
     ConversationHandler,
     CallbackContext,
 )
-PORT = int(os.environ.get('PORT', 5000))
+PORT = int(os.environ.get('PORT', 8443))
 TOKEN = '1613440161:AAE69bocIvppeWALWGNWK93foVeOaw736Ws'
 
 # Enable logging

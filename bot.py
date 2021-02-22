@@ -243,7 +243,7 @@ def bio(update: Update, context: CallbackContext) -> int:
 '''
 
 
-def cancel(update: Update, context: CallbackContext) -> int:
+def exit(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("User %s canceled the conversation.", user.first_name)
     update.message.reply_text(
@@ -299,7 +299,7 @@ def main():
                     MessageHandler(Filters.regex('^YES PLS$'), places_random)]
                     #CommandHandler('skip', skip_photo)]
         },
-        fallbacks=[CommandHandler('quit', cancel)],
+        fallbacks=[CommandHandler('exit', exit)],
     )
 
     dp.add_handler(conv_handler)

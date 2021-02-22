@@ -26,8 +26,8 @@ logger = logging.getLogger(__name__)
 
 MYSTATE, ACTION, PHOTO, LOCATION, BIO = range(5)
 
-def start(bot: Bot, update: Update, context: CallbackContext) -> int:
-    giflink = 'https://media.giphy.com/media/12uXi1GXBibALC/giphy.gif'
+def start(update: Update, context: CallbackContext) -> int:
+    #giflink = 'https://media.giphy.com/media/12uXi1GXBibALC/giphy.gif'
     # update.message.reply_animation(
     #     animation=giflink, 
     #     caption= "HELLO",

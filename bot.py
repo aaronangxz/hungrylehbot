@@ -16,6 +16,7 @@ from telegram.ext import (
 )
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ["TOKEN"]
+gif = "https://media.giphy.com/media/12uXi1GXBibALC/giphy.gif"
 
 # Enable logging
 logging.basicConfig(filename = 'bot.log', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -25,9 +26,13 @@ logger = logging.getLogger(__name__)
 MYSTATE, ACTION, PHOTO, LOCATION, BIO = range(5)
 
 def start(update: Update, context: CallbackContext) -> int:
-    reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything😒']]
+    reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything']]
+    update.bot.sendDocument(chat_id = 1613440161,Document=gif),
     update.message.reply_text(
-        'Helloo, this is Patrick.\n'
+        'Helloo, this is Patrick.🤓\n',
+        reply_markup=ReplyKeyboardRemove(),
+    )
+    update.message.reply_text(
         'Not sure where to makan?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
     )
@@ -192,7 +197,7 @@ def help(update, context):
 
 def echo(update, context):
     """Echo the user message."""
-    update.message.reply_text('I''m a parrot')
+    update.message.reply_text('I''m a parrot🦜')
     update.message.reply_text(update.message.text)
 
 def error(update, context):

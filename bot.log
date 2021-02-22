@@ -2,3 +2,27 @@
 2021-02-22 15:46:01,317 - __main__ - INFO - Xuan Ze needs ideas
 2021-02-22 15:46:02,983 - __main__ - INFO - Xuan Ze selected East
 2021-02-22 15:46:06,923 - __main__ - INFO - Xuan Ze is exiting
+2021-02-22 15:53:59,170 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 15:54:02,903 - __main__ - INFO - User Xuan Ze canceled the conversation.
+2021-02-22 15:54:03,926 - __main__ - INFO - User Xuan Ze canceled the conversation.
+2021-02-22 15:54:04,958 - __main__ - INFO - User Xuan Ze canceled the conversation.
+2021-02-22 15:54:17,401 - __main__ - INFO - User Xuan Ze canceled the conversation.
+2021-02-22 15:55:12,764 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 15:55:23,751 - __main__ - INFO - Xuan Ze selected random.
+2021-02-22 15:56:21,863 - __main__ - INFO - Xuan Ze selected random.
+2021-02-22 15:56:33,967 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 15:56:39,437 - __main__ - INFO - Xuan Ze is not hungry.
+2021-02-22 15:56:45,471 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-22 15:56:47,670 - __main__ - INFO - Xuan Ze selected East
+2021-02-22 15:56:51,720 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-22 15:56:53,677 - __main__ - INFO - Xuan Ze selected West.
+2021-02-22 15:56:57,286 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-22 15:56:58,793 - __main__ - INFO - Xuan Ze selected Central.
+2021-02-22 15:57:02,615 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-22 15:57:04,276 - __main__ - INFO - Xuan Ze selected East
+2021-02-22 15:57:07,337 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-22 15:57:08,555 - __main__ - INFO - Xuan Ze selected West.
+2021-02-22 15:57:16,140 - __main__ - INFO - User Xuan Ze canceled the conversation.
+2021-02-22 15:57:24,135 - __main__ - INFO - Xuan Ze selected random.
+2021-02-22 16:00:49,475 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:04:14,753 - __main__ - INFO - Xuan Ze is not hungry.

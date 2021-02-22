@@ -14,7 +14,7 @@ Basic Echobot example, repeats messages.
 Press Ctrl-C on the command line or send a signal to the process to stop the
 bot.
 """
-
+import os
 import logging
 import random
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update
@@ -26,6 +26,8 @@ from telegram.ext import (
     ConversationHandler,
     CallbackContext,
 )
+PORT = int(os.environ.get('PORT', 5000))
+TOKEN = '1613440161:AAE69bocIvppeWALWGNWK93foVeOaw736Ws'
 
 # Enable logging
 logging.basicConfig(filename = 'bot.log', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -88,11 +90,15 @@ def randomplaces(update: Update, context: CallbackContext) -> int:
 def places_random(update: Update, context: CallbackContext) -> int:
     randomlist = ['https://goo.gl/maps/P5C5nDYrn8G19LPT6','https://g.page/pollensingapore?share','https://goo.gl/maps/HAeyHWqV3vmDQnNs9',
                     'https://g.page/OverEasySG?share','https://g.page/theassemblygroundcineleisure?share','https://goo.gl/maps/o8DuJkroyoSK1MqK9',
-                    'https://goo.gl/maps/1iX2BCbDSKWUVepm7','https://goo.gl/maps/G4cv4uBhP3ve7soc8','https://g.page/burger-lobster-jewel-changi?share',
-                    'https://goo.gl/maps/u7DJozX5Knsno5Gq6','https://g.page/elfuegosg?share','https://g.page/TanukiRawJewel?share',
-                    'https://goo.gl/maps/Et4cABQ1rMkbe4u5A','https://g.page/HaidilaoIMM?share','https://goo.gl/maps/x5e4Ro9NxgucRHjM8',
-                    'https://g.page/BrotzeitWestgate?share','https://goo.gl/maps/UR37N1bBYAHfyPLN8','https://goo.gl/maps/QL6kJ1Hu9MxL3wVQ8',
-                    'https://goo.gl/maps/JWNgN5uFBGo1FjTx8']
+                    'https://goo.gl/maps/1iX2BCbDSKWUVepm7','https://goo.gl/maps/G4cv4uBhP3ve7soc8','https://goo.gl/maps/DGzoTrv45uD8HXKw5',
+                    'https://goo.gl/maps/YKWo1ckMJ3qeEXVZA','https://g.page/wangdaebakbbq?share','https://goo.gl/maps/Fftfy929T1dS7V6t7','https://goo.gl/maps/3TANCBdHR9kfVm1w5',
+                    'https://goo.gl/maps/LAhF4yuABZpGvHgr7','https://goo.gl/maps/rkNoBPjYK5LtK2Ax8','https://g.page/prego-sg?share','https://goo.gl/maps/74wZZ3vUwj3aFmGGA',
+                    'https://g.page/jibiru?share','https://g.page/menbaka_sg?share','https://g.page/HaidilaoIMM?share','https://goo.gl/maps/x5e4Ro9NxgucRHjM8','https://g.page/BrotzeitWestgate?share',
+                'https://goo.gl/maps/UR37N1bBYAHfyPLN8','https://goo.gl/maps/QL6kJ1Hu9MxL3wVQ8','https://goo.gl/maps/JWNgN5uFBGo1FjTx8',
+                'https://goo.gl/maps/9hmwFiL9DC5ugpEN8','https://g.page/ENSakaba-JEM?share','https://goo.gl/maps/qDeTVYc9RxSbU9rv8',
+                'https://goo.gl/maps/Gz2XCxEdNP5oomxu7','https://goo.gl/maps/5VtjHapbwQ714RmF6','https://goo.gl/maps/MENsUrKojYjeVP649',
+                'https://goo.gl/maps/n3zcrLJZsXkZYiwT8','https://goo.gl/maps/v5MJhQGfwMrDy2d9A','https://g.page/OPPABBQ?share',
+                ]
     #bot.sendLocation(@hungrylehbot, latitude=lat, longitude=lon),
     update.message.reply_text(
         random.choice(randomlist),
@@ -113,7 +119,13 @@ def places_central(update: Update, context: CallbackContext) -> int:
                     'https://goo.gl/maps/1iX2BCbDSKWUVepm7','https://goo.gl/maps/G4cv4uBhP3ve7soc8','https://goo.gl/maps/DGzoTrv45uD8HXKw5',
                     'https://goo.gl/maps/YKWo1ckMJ3qeEXVZA','https://g.page/wangdaebakbbq?share','https://goo.gl/maps/Fftfy929T1dS7V6t7','https://goo.gl/maps/3TANCBdHR9kfVm1w5',
                     'https://goo.gl/maps/LAhF4yuABZpGvHgr7','https://goo.gl/maps/rkNoBPjYK5LtK2Ax8','https://g.page/prego-sg?share','https://goo.gl/maps/74wZZ3vUwj3aFmGGA',
-                    'https://g.page/jibiru?share','https://g.page/menbaka_sg?share'
+                    'https://g.page/jibiru?share','https://g.page/menbaka_sg?share',
+                    'https://g.page/burger-lobster-jewel-changi?share','https://goo.gl/maps/u7DJozX5Knsno5Gq6','https://g.page/elfuegosg?share',
+                'https://g.page/TanukiRawJewel?share','https://goo.gl/maps/Et4cABQ1rMkbe4u5A','https://goo.gl/maps/TLAJvBSW6bY9A4Kw5',
+                'https://goo.gl/maps/GYPWsS6sYiDVa7xQA','https://goo.gl/maps/fGzi5m6hUJcYBSBE9','https://goo.gl/maps/xDcAHz7fWh4aF8kL8',
+                'https://goo.gl/maps/ZCb5nQAVZRrii7Ab9','https://goo.gl/maps/3KhF4bfoRwtr9Tid8','https://goo.gl/maps/CrKBC3PQcaL5sU1M9',
+                'https://g.page/itacho-sushi-bedok-mall?share','https://goo.gl/maps/VoMsTWLwSMMMf1g88','https://goo.gl/maps/HKGCTcCXar1u9jN87',
+                'https://g.page/tonito-latin-american-kitchen?share'
                     ]
     #bot.sendLocation(@hungrylehbot, latitude=lat, longitude=lon),
     update.message.reply_text(
@@ -230,6 +242,7 @@ def bio(update: Update, context: CallbackContext) -> int:
     return ConversationHandler.END
 '''
 
+
 def cancel(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("User %s canceled the conversation.", user.first_name)
@@ -273,7 +286,7 @@ def main():
 
     # Add conversation handler with the states GENDER, PHOTO, LOCATION and BIO
     conv_handler = ConversationHandler(
-        entry_points=[CommandHandler('start', start)],
+        entry_points=[CommandHandler('start', start),CommandHandler('random', places_random)],
         states={
             MYSTATE: [MessageHandler(Filters.regex('^I NEED IDEAS$'), ideas),
                     MessageHandler(Filters.regex('^Not hungry la$'), Nah),
@@ -286,7 +299,7 @@ def main():
                     MessageHandler(Filters.regex('^YES PLS$'), places_random)]
                     #CommandHandler('skip', skip_photo)]
         },
-        fallbacks=[CommandHandler('cancel', cancel)],
+        fallbacks=[CommandHandler('quit', cancel)],
     )
 
     dp.add_handler(conv_handler)
@@ -305,10 +318,10 @@ def main():
 
     # Start the Bot
     updater.start_webhook(listen="0.0.0.0",
-                          port=PORT,
-                          url_path="1613440161:AAE69bocIvppeWALWGNWK93foVeOaw736Ws")
+                          port = PORT,
+                          url_path= TOKEN)
     # updater.bot.set_webhook(url=settings.WEBHOOK_URL)
-    updater.bot.set_webhook("https://hungrylehbot.herokuapp.com/" + "1613440161:AAE69bocIvppeWALWGNWK93foVeOaw736Ws")
+    updater.bot.set_webhook('https://hungrylehbot.herokuapp.com/' + TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since

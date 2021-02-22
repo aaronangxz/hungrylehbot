@@ -5,7 +5,8 @@
 import os
 import logging
 import random
-from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update
+import telegram
+from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, ParseMode, Bot
 from telegram.ext import (
     Updater,
     CommandHandler,
@@ -16,7 +17,7 @@ from telegram.ext import (
 )
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ["TOKEN"]
-gif = "https://media.giphy.com/media/12uXi1GXBibALC/giphy.gif"
+bot = telegram.Bot(token=TOKEN)
 
 # Enable logging
 logging.basicConfig(filename = 'bot.log', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -25,9 +26,22 @@ logger = logging.getLogger(__name__)
 
 MYSTATE, ACTION, PHOTO, LOCATION, BIO = range(5)
 
-def start(update: Update, context: CallbackContext) -> int:
+def start(bot: Bot, update: Update, context: CallbackContext) -> int:
+    giflink = 'https://media.giphy.com/media/12uXi1GXBibALC/giphy.gif'
+    update.message.reply_animation(
+        animation=giflink, 
+        caption= "HELLO",
+        reply_markup=ReplyKeyboardRemove(),
+        parse_mode=ParseMode.MARKDOWN
+    )
+
     reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything']]
-    #bot.sendDocument(chat_id = 1613440161,Document=gif),
+    # bot.send_animation(
+    # chat_id=-1001613440161,
+    # animation= giflink,
+    # )
+
+    # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
     update.message.reply_text(
         'Helloo, this is Patrick.🤓\n',
         reply_markup=ReplyKeyboardRemove(),

@@ -27,7 +27,7 @@ MYSTATE, ACTION, PHOTO, LOCATION, BIO = range(5)
 
 def start(update: Update, context: CallbackContext) -> int:
     reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything']]
-    update.bot.sendDocument(chat_id = 1613440161,Document=gif),
+    #bot.sendDocument(chat_id = 1613440161,Document=gif),
     update.message.reply_text(
         'Helloo, this is Patrick.🤓\n',
         reply_markup=ReplyKeyboardRemove(),

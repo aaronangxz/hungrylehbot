@@ -26,3 +26,162 @@
 2021-02-22 15:57:24,135 - __main__ - INFO - Xuan Ze selected random.
 2021-02-22 16:00:49,475 - apscheduler.scheduler - INFO - Scheduler started
 2021-02-22 16:04:14,753 - __main__ - INFO - Xuan Ze is not hungry.
+2021-02-22 16:21:10,956 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:21:13,524 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by setWebhook request
+2021-02-22 16:21:14,522 - __main__ - WARNING - Update "None" caused error "Conflict: terminated by setWebhook request"
+2021-02-22 16:21:17,831 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:21:17,832 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:21:19,654 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:21:19,654 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:21:25,401 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:21:25,401 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:21:29,076 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:21:29,076 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:21:34,463 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:21:34,464 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:21:42,416 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:21:42,417 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:21:54,177 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:21:54,178 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:22:11,698 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:22:11,698 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:22:33,683 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-22 16:22:33,683 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-22 16:22:35,290 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-22 16:22:37,125 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:22:39,397 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by setWebhook request
+2021-02-22 16:22:39,938 - __main__ - WARNING - Update "None" caused error "Conflict: terminated by setWebhook request"
+2021-02-22 16:22:43,686 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:22:43,686 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:22:45,486 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:22:45,486 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:22:51,035 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:22:51,035 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:22:54,713 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:22:54,714 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:23:00,091 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:23:00,091 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:23:08,034 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:23:08,034 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:23:19,887 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:23:19,888 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:23:37,529 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:23:37,530 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:24:03,453 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:24:03,453 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:24:42,190 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:24:42,190 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:25:12,533 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:25:12,533 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:25:43,044 - telegram.ext.updater - ERROR - Error while getting Updates: Unauthorized
+2021-02-22 16:25:43,044 - __main__ - WARNING - Update "None" caused error "Unauthorized"
+2021-02-22 16:26:01,360 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-22 16:26:01,361 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-22 16:26:02,967 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-22 16:26:18,469 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:26:24,824 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by setWebhook request
+2021-02-22 16:26:24,825 - __main__ - WARNING - Update "None" caused error "Conflict: terminated by setWebhook request"
+2021-02-22 16:26:29,127 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:26:29,128 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:26:30,929 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:26:30,929 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:26:36,510 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:26:36,511 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:26:40,391 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:26:40,391 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:26:45,921 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:26:45,922 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:26:53,813 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:26:53,814 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:27:05,584 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:27:05,585 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:27:22,990 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:27:22,991 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:27:49,092 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:27:49,093 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:28:21,615 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-22 16:28:21,615 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-22 16:28:21,960 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-22 16:28:29,274 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:28:57,075 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:29:02,640 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by setWebhook request
+2021-02-22 16:29:02,640 - __main__ - WARNING - Update "None" caused error "Conflict: terminated by setWebhook request"
+2021-02-22 16:29:04,138 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:29:04,138 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:29:09,081 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:29:09,081 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:29:11,624 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:29:11,624 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:29:15,297 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:29:15,298 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:29:20,662 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:29:20,662 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:29:28,550 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:29:28,550 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:29:40,243 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:29:40,243 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:29:57,624 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:29:57,624 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:30:23,550 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:30:23,550 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:31:02,304 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:31:02,304 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:31:19,947 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-22 16:31:19,948 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-22 16:31:20,335 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-22 16:31:23,730 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:31:25,215 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by setWebhook request
+2021-02-22 16:31:25,216 - __main__ - WARNING - Update "None" caused error "Conflict: terminated by setWebhook request"
+2021-02-22 16:31:29,521 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:31:29,522 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:31:31,419 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:31:31,420 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:31:36,974 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:31:36,974 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:31:40,787 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:31:40,787 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:31:46,164 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:31:46,165 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:31:54,068 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:31:54,069 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:32:05,809 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:32:05,809 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:32:23,443 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:32:23,444 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:32:49,452 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:32:49,452 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:33:28,199 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:33:28,200 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:33:58,523 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:33:58,524 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:34:28,952 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:34:28,952 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:34:54,172 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-22 16:34:54,173 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-22 16:34:54,548 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-22 16:38:11,276 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:38:13,252 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: terminated by setWebhook request
+2021-02-22 16:38:13,253 - __main__ - WARNING - Update "None" caused error "Conflict: terminated by setWebhook request"
+2021-02-22 16:38:17,556 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:38:17,557 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:38:19,396 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:38:19,396 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:38:25,086 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:38:25,087 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:38:28,819 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:38:28,820 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:38:34,358 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:38:34,359 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:38:42,328 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:38:42,328 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:38:54,009 - telegram.ext.updater - ERROR - Error while getting Updates: Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first
+2021-02-22 16:38:54,009 - __main__ - WARNING - Update "None" caused error "Conflict: can't use getUpdates method while webhook is active; use deleteWebhook to delete the webhook first"
+2021-02-22 16:39:09,792 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-22 16:39:09,792 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-22 16:39:10,716 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-22 16:39:14,616 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-22 16:39:44,804 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-22 16:39:47,092 - __main__ - INFO - Xuan Ze selected East
+2021-02-22 16:39:53,920 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-22 16:39:55,909 - __main__ - INFO - Xuan Ze selected West.
+2021-02-22 16:39:58,809 - __main__ - INFO - Xuan Ze is exiting

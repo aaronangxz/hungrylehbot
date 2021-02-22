@@ -26,8 +26,8 @@ from telegram.ext import (
     ConversationHandler,
     CallbackContext,
 )
-PORT = int(os.environ.get('PORT', 8443))
-TOKEN = '1613440161:AAE69bocIvppeWALWGNWK93foVeOaw736Ws'
+# PORT = int(os.environ.get('PORT', 8443))
+TOKEN = '1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY'
 
 # Enable logging
 logging.basicConfig(filename = 'bot.log', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -279,7 +279,7 @@ def main():
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
-    updater = Updater("1613440161:AAE69bocIvppeWALWGNWK93foVeOaw736Ws", use_context=True)
+    updater = Updater(TOKEN, use_context=True)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
@@ -313,12 +313,16 @@ def main():
     # log all errors
     dp.add_error_handler(error)
 
+    updater.bot.deleteWebhook()
+
     # Start the Bot
     updater.start_polling()
 
+
+
     # Start the Bot
     updater.start_webhook(listen="0.0.0.0",
-                          port = int(PORT),
+                          port = PORT,
                           url_path= TOKEN)
     # updater.bot.set_webhook(url=settings.WEBHOOK_URL)
     updater.bot.set_webhook('https://hungrylehbot.herokuapp.com/' + TOKEN)

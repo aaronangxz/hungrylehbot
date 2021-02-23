@@ -6,6 +6,8 @@ import os
 import logging
 import random
 import telegram
+from time import sleep 
+from random import random 
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, ParseMode, Bot
 from telegram.ext import (
     Updater,
@@ -27,7 +29,7 @@ logger = logging.getLogger(__name__)
 MYSTATE, ACTION, PHOTO, LOCATION, BIO = range(5)
 
 def start(update: Update, context: CallbackContext) -> int:
-    #giflink = 'https://media.giphy.com/media/12uXi1GXBibALC/giphy.gif'
+    giflink = 'https://media.giphy.com/media/12uXi1GXBibALC/giphy.gif'
     # update.message.reply_animation(
     #     animation=giflink, 
     #     caption= "HELLO",
@@ -35,13 +37,17 @@ def start(update: Update, context: CallbackContext) -> int:
     #     parse_mode=ParseMode.MARKDOWN
     # )
 
-    reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything']]
-    # bot.send_animation(
-    # chat_id=-1001613440161,
-    # animation= giflink,
-    # )
 
+    reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything']]
+
+    context.bot.send_animation(
+    chat_id=update.message.chat_id,
+    animation= giflink,
+    )
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random() * 2 + 3.)
     # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
+    
     update.message.reply_text(
         'Helloo, this is Patrick.🤓\n',
         reply_markup=ReplyKeyboardRemove(),

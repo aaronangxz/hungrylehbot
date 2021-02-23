@@ -227,8 +227,8 @@ def help(update, context):
 
 def echo(update, context):
     """Echo the user message."""
-    update.message.reply_text('I''m a parrot🦜')
-    update.message.reply_text(update.message.text)
+    update.message.reply_text('Something is wrong.. try /start')
+    #update.message.reply_text(update.message.text)
 
 def error(update, context):
     """Log Errors caused by Updates."""
@@ -249,12 +249,12 @@ def main():
             MYSTATE: [MessageHandler(Filters.regex('^I NEED IDEAS$'), ideas),
                     MessageHandler(Filters.regex('^Not hungry la$'), Nah),
                     MessageHandler(Filters.regex('^Anything$'), randomplaces)],
-            ACTION: [MessageHandler(Filters.regex('^Lmao lame$'), ideas),
-                    MessageHandler(Filters.regex('^Nice!$'), ending),
-                    MessageHandler(Filters.regex('^Central$'), places_central), 
+            ACTION: [MessageHandler(Filters.regex('^Central$'), places_central), 
                     MessageHandler(Filters.regex('^East$'), places_east),
                     MessageHandler(Filters.regex('^West$'), places_west),
-                    MessageHandler(Filters.regex('^YES PLS$'), places_random)]
+                    MessageHandler(Filters.regex('^YES PLS$'), places_random),
+                    MessageHandler(Filters.regex('^Lmao lame$'), ideas),
+                    MessageHandler(Filters.regex('^Nice!$'), ending)]
         },
         fallbacks=[CommandHandler('exit', exit)],
     )

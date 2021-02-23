@@ -44,6 +44,7 @@ def start(update: Update, context: CallbackContext) -> int:
     chat_id=update.message.chat_id,
     animation= giflink,
     )
+
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     sleep(random() * 2 + 3.)
     # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
@@ -62,6 +63,8 @@ def ideas(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     reply_keyboard = [['Central', 'East','West']]
     logger.info("%s needs ideas", user.first_name)
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random() * 2 + 3.)
     update.message.reply_text(
         'Where are you willing to travel to?📍',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
@@ -71,10 +74,13 @@ def ideas(update: Update, context: CallbackContext) -> int:
 def Nah(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s is not hungry.", user.first_name)
+    sleep(random() * 2 + 3.)
     update.message.reply_text(
         '??? You sure anot.🥺',
         reply_markup=ReplyKeyboardRemove(),
     )
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random() * 2 + 3.)
     update.message.reply_text(
         'Nevermind come back later when you are.',
         reply_markup=ReplyKeyboardRemove(),
@@ -90,9 +96,12 @@ def randomplaces(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     reply_keyboard = [['YES PLS']]
     logger.info("%s selected random.", user.first_name)
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random() * 2 + 3.)
     update.message.reply_text(
         'Anything your head🙄🙄'
     )
+    sleep(random() * 2 + 3.)
     update.message.reply_text(
         'I anyhow give you suggestions ah, you sure?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),

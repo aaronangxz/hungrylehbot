@@ -45,8 +45,8 @@ def start(update: Update, context: CallbackContext) -> int:
     animation= giflink,
     )
 
-    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    sleep(random())
+    # context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    # sleep(random())
     # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
     
     update.message.reply_text(
@@ -80,8 +80,8 @@ def Nah(update: Update, context: CallbackContext) -> int:
         '??? You sure anot.🥺',
         reply_markup=ReplyKeyboardRemove(),
     )
-    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    sleep(random())
+    # context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    # sleep(random())
     update.message.reply_text(
         'Nevermind come back later when you are.',
         reply_markup=ReplyKeyboardRemove(),
@@ -101,8 +101,8 @@ def randomplaces(update: Update, context: CallbackContext) -> int:
     update.message.reply_text(
         'Anything your head🙄🙄'
     )
-    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    sleep(random())    
+    # context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    # sleep(random())    
     update.message.reply_text(
         'I anyhow give you suggestions ah, you sure?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),

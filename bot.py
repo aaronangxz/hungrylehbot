@@ -46,7 +46,7 @@ def start(update: Update, context: CallbackContext) -> int:
     )
 
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    sleep(random() * 2 + 1)
+    sleep(random())
     # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
     
     update.message.reply_text(

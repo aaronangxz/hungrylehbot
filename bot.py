@@ -110,6 +110,8 @@ def randomplaces(update: Update, context: CallbackContext) -> int:
     return ACTION
 
 def places_random(update: Update, context: CallbackContext) -> int:
+    user = update.message.from_user
+    logger.info("%s selected random.", user.first_name)
     randomlist = ['https://goo.gl/maps/P5C5nDYrn8G19LPT6','https://g.page/pollensingapore?share','https://goo.gl/maps/HAeyHWqV3vmDQnNs9',
                     'https://g.page/OverEasySG?share','https://g.page/theassemblygroundcineleisure?share','https://goo.gl/maps/o8DuJkroyoSK1MqK9',
                     'https://goo.gl/maps/1iX2BCbDSKWUVepm7','https://goo.gl/maps/G4cv4uBhP3ve7soc8','https://goo.gl/maps/DGzoTrv45uD8HXKw5',

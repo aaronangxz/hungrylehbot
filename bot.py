@@ -7,7 +7,7 @@ import logging
 import random
 import telegram
 from time import sleep 
-from random import random 
+#from random import random 
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, ParseMode, Bot
 from telegram.ext import (
     Updater,
@@ -20,10 +20,11 @@ from telegram.ext import (
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ["TOKEN"]
 bot = telegram.Bot(token=TOKEN)
+TYPESPEED = [0.25,0.5,0.75,1]
 
 # Enable logging
-logging.basicConfig(filename = 'bot.log', format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    level=logging.INFO)
+logging.basicConfig(filename='bot.log',format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 MYSTATE, ACTION, PHOTO, LOCATION, BIO = range(5)
@@ -40,19 +41,23 @@ def start(update: Update, context: CallbackContext) -> int:
 
     reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything']]
 
-    # context.bot.send_animation(
-    # chat_id=update.message.chat_id,
-    # animation= giflink,
-    # )
+    context.bot.send_animation(
+    chat_id=update.message.chat_id,
+    animation= giflink,
+    )
 
-    # context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    # sleep(random())
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
     # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
     
     update.message.reply_text(
         'Helloo, this is Patrick.🤓\n',
         reply_markup=ReplyKeyboardRemove(),
     )
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
     update.message.reply_text(
         'Not sure where to makan?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
@@ -63,8 +68,10 @@ def ideas(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     reply_keyboard = [['Central', 'East','West']]
     logger.info("%s needs ideas", user.first_name)
-    # context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    # sleep(random())
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
     update.message.reply_text(
         'Where are you willing to travel to?📍',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
@@ -74,14 +81,18 @@ def ideas(update: Update, context: CallbackContext) -> int:
 def Nah(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s is not hungry.", user.first_name)
-    # context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    # sleep(random())
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
     update.message.reply_text(
         '??? You sure anot.🥺',
         reply_markup=ReplyKeyboardRemove(),
     )
-    # context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    # sleep(random())
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+    
     update.message.reply_text(
         'Nevermind come back later when you are.',
         reply_markup=ReplyKeyboardRemove(),
@@ -101,8 +112,10 @@ def randomplaces(update: Update, context: CallbackContext) -> int:
     update.message.reply_text(
         'Anything your head🙄🙄'
     )
-    # context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    # sleep(random())    
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
     update.message.reply_text(
         'I anyhow give you suggestions ah, you sure?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
@@ -136,6 +149,9 @@ def places_random(update: Update, context: CallbackContext) -> int:
         random.choice(randomlist),
         reply_markup=ReplyKeyboardRemove(),
     )    
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+    
     update.message.reply_text(
         'Nah, enjoy😛',
         reply_markup=ReplyKeyboardRemove(),
@@ -158,6 +174,9 @@ def places_central(update: Update, context: CallbackContext) -> int:
         random.choice(centrallist),
         reply_markup=ReplyKeyboardRemove(),
     )    
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
     update.message.reply_text(
         'Can ah?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
@@ -179,6 +198,9 @@ def places_east(update: Update, context: CallbackContext) -> int:
         random.choice(eastlist),
         reply_markup=ReplyKeyboardRemove(),
     )    
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
     update.message.reply_text(
         'Can ah?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
@@ -200,6 +222,9 @@ def places_west(update: Update, context: CallbackContext) -> int:
         random.choice(westlist),
         reply_markup=ReplyKeyboardRemove()
     )    
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
     update.message.reply_text(
         'Can ah?',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
@@ -209,6 +234,10 @@ def places_west(update: Update, context: CallbackContext) -> int:
 def ending(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s is exiting", user.first_name)
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
     update.message.reply_text(
         'Enjoy your meal!😋😋😋',
         reply_markup=ReplyKeyboardRemove()
@@ -218,6 +247,10 @@ def ending(update: Update, context: CallbackContext) -> int:
 def exit(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("User %s canceled the conversation.", user.first_name)
+    
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
     update.message.reply_text(
         'Bye! Chat me again next time ❤️', reply_markup=ReplyKeyboardRemove()
     )
@@ -251,10 +284,10 @@ def main():
             MYSTATE: [MessageHandler(Filters.regex('^I NEED IDEAS$'), ideas),
                     MessageHandler(Filters.regex('^Not hungry la$'), Nah),
                     MessageHandler(Filters.regex('^Anything$'), randomplaces)],
-            ACTION: [MessageHandler(Filters.regex('^Central'), places_central), 
-                    MessageHandler(Filters.regex('^East'), places_east),
-                    MessageHandler(Filters.regex('^West'), places_west),
-                    MessageHandler(Filters.regex('^YES PLS'), places_random),
+            ACTION: [MessageHandler(Filters.regex('^Central$'), places_central), 
+                    MessageHandler(Filters.regex('^East$'), places_east),
+                    MessageHandler(Filters.regex('^West$'), places_west),
+                    MessageHandler(Filters.regex('^YES PLS$'), places_random),
                     MessageHandler(Filters.regex('^Lmao lame$'), ideas),
                     MessageHandler(Filters.regex('^Nice!$'), ending)]
         },
@@ -275,7 +308,7 @@ def main():
     #updater.bot.deleteWebhook()
 
     # Start the Bot
-    #updater.start_polling()
+    # updater.start_polling()
 
     # Start the Bot
     updater.start_webhook(listen="0.0.0.0",

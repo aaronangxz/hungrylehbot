@@ -246,3 +246,10 @@
 2021-02-22 22:04:38,555 - apscheduler.scheduler - INFO - Scheduler started
 2021-02-22 22:05:41,019 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 2021-02-22 22:05:41,020 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-24 01:32:45,969 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-24 01:34:04,817 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-24 01:34:04,817 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-24 01:34:13,464 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-24 01:34:58,809 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-24 01:34:58,810 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-24 01:34:59,319 - telegram.ext.updater - WARNING - Exiting immediately!

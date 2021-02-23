@@ -40,10 +40,10 @@ def start(update: Update, context: CallbackContext) -> int:
 
     reply_keyboard = [['I NEED IDEAS', 'Not hungry la', 'Anything']]
 
-    context.bot.send_animation(
-    chat_id=update.message.chat_id,
-    animation= giflink,
-    )
+    # context.bot.send_animation(
+    # chat_id=update.message.chat_id,
+    # animation= giflink,
+    # )
 
     # context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     # sleep(random())

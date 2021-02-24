@@ -18,8 +18,8 @@ from telegram.ext import (
     CallbackContext,
 )
 from googleplaces import GooglePlaces, types, lang
-googleAPI = 'AIzaSyDi8qSI76P9HJRfQKOwP1ju5x9rXzZiJZg'
-google_places = GooglePlaces(googleAPI)
+GOOGLEAPI = os.environ["GOOGLEAPI"]
+google_places = GooglePlaces(GOOGLEAPI)
 prevlocation = None
 prevrequest = None
 

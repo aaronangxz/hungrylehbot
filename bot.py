@@ -6,6 +6,7 @@ import os
 import logging
 import random
 import telegram
+import json
 from time import sleep 
 #from random import random 
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, ParseMode, Bot
@@ -154,11 +155,13 @@ def mapquery(update: Update, context: CallbackContext) -> int:
         logger.info("prevlocation is %s",prevlocation)
     elif prevlocation == '/exit':
         return ConversationHandler.END
+
     logger.info("prevlocation is %s",prevlocation)
     repeat = True
-    randomradius = random.randint(0,5000)
+    randomradius = random.randint(0,2000)
+
     query_result = google_places.nearby_search(
-        location= (prevlocation), keyword= 'food',
+        location= (prevlocation + ' Singapore'), keyword= 'food',
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s searched %s with radius of %d", user.first_name,prevlocation,randomradius)
     logger.info("query results are: %s",query_result.places)
@@ -171,12 +174,17 @@ def mapquery(update: Update, context: CallbackContext) -> int:
         query_result.places[delaytime].get_details()
         update.message.reply_text('Want to try ' + query_result.places[delaytime].name + ' ? 🤔\n'
                                     + query_result.places[delaytime].url)
-        # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
-        context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        # jsondata = json.loads( query_result.places[delaytime].get_details())
+        context.bot.sendLocation(update.message.chat_id, latitude= float(place.geo_location['lat']),longitude=float(place.geo_location['lng']))
+        # context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
         
         for photo in query_result.places[delaytime].photos:
             photo.get(maxheight=500, maxwidth=500)
             context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
+            # logger.info("details: %s",query_result.places[delaytime].details)
+            # logger.info("Price level is %s",query_result.places[delaytime].details['price_level'])
+            # logger.info("Ratings: %s",query_result.places[delaytime].details['rating'])
+            # update.message.reply_text('Ratings: %s',query_result.places[delaytime].details['result']['rating'])
             break
 
         context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
@@ -256,7 +264,8 @@ def places_random(update: Update, context: CallbackContext) -> int:
         update.message.reply_text('Okay, go to ' + query_result.places[delaytime].name + '😛\n'
                                     + query_result.places[delaytime].url)
         # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
-        context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        context.bot.sendLocation(update.message.chat_id, latitude= float(query_result.places[delaytime].geo_location['lat']), longitude=float(query_result.places[delaytime].geo_location['lng']))
+        
         for photo in query_result.places[delaytime].photos:
             photo.get(maxheight=500, maxwidth=500)
             context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
@@ -321,7 +330,7 @@ def places_central(update: Update, context: CallbackContext) -> int:
         update.message.reply_text('Okay, want to try ' + query_result.places[delaytime].name + '?😛\n'
                                     + query_result.places[delaytime].url)
         # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
-        context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        context.bot.sendLocation(update.message.chat_id, latitude= float(query_result.places[delaytime].geo_location['lat']), longitude=float(query_result.places[delaytime].geo_location['lng']))
         for photo in query_result.places[delaytime].photos:
             photo.get(maxheight=500, maxwidth=500)
             context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
@@ -386,7 +395,7 @@ def places_east(update: Update, context: CallbackContext) -> int:
         update.message.reply_text('Okay, want to try ' + query_result.places[delaytime].name + '?😛\n'
                                     + query_result.places[delaytime].url)
         # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
-        context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        context.bot.sendLocation(update.message.chat_id, latitude= float(query_result.places[delaytime].geo_location['lat']), longitude=float(query_result.places[delaytime].geo_location['lng']))
         for photo in query_result.places[delaytime].photos:
             photo.get(maxheight=500, maxwidth=500)
             context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
@@ -449,7 +458,7 @@ def places_west(update: Update, context: CallbackContext) -> int:
         update.message.reply_text('Okay, want to try ' + query_result.places[delaytime].name + '?😛\n'
                                     + query_result.places[delaytime].url)
         # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
-        context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        context.bot.sendLocation(update.message.chat_id, latitude= float(query_result.places[delaytime].geo_location['lat']), longitude=float(query_result.places[delaytime].geo_location['lng']))
         for photo in query_result.places[delaytime].photos:
             photo.get(maxheight=500, maxwidth=500)
             context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
@@ -595,14 +604,14 @@ def main():
     #updater.bot.deleteWebhook()
 
     # Start the Bot
-    # updater.start_polling()
+    updater.start_polling()
 
     # Start the Bot
     updater.start_webhook(listen="0.0.0.0",
                           port = PORT,
                           url_path= TOKEN)
     # updater.bot.set_webhook(url=settings.WEBHOOK_URL)
-    updater.bot.set_webhook('https://hungrylehbot.herokuapp.com/' + TOKEN)
+    # updater.bot.set_webhook('https://hungrylehbot.herokuapp.com/' + TOKEN)
 
     # Run the bot until you press Ctrl-C or the process receives SIGINT,
     # SIGTERM or SIGABRT. This should be used most of the time, since

@@ -572,7 +572,8 @@ def main():
                     MessageHandler(Filters.regex('^Lmao lame$'), ideas),
                     MessageHandler(Filters.regex('^Nahh$'), mapquery),
                     MessageHandler(Filters.regex('^Nice!$'), ending),
-                    MessageHandler(Filters.text, mapquery)],
+                    MessageHandler(Filters.text, mapquery),
+                    CommandHandler("exit", exit)],
             USERLOCATION: [MessageHandler(Filters.text,mapquery)
                     ],
         },
@@ -581,7 +582,7 @@ def main():
 
     dp.add_handler(conv_handler)
     # on different commands - answer in Telegram
-    #dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("exit", exit))
     dp.add_handler(CommandHandler("help", help))
 
     # on noncommand i.e message - echo the message on Telegram

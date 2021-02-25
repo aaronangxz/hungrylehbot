@@ -22,7 +22,7 @@ GOOGLEAPI = os.environ["GOOGLEAPI"]
 google_places = GooglePlaces(GOOGLEAPI)
 prevlocation = None
 prevrequest = None
-
+repeat = False
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ["TOKEN"]
 bot = telegram.Bot(token=TOKEN)
@@ -94,9 +94,9 @@ def ideas(update: Update, context: CallbackContext) -> int:
 
 def maprequest(update: Update, context: CallbackContext) -> int:
     update.message.reply_text('Where are you?\n'
-                                 '(Type the name of the nearest mall / mrt)\n\n'
+                                 '(Type the name of the nearest mall / mrt / area)\n\n'
                                  'I am still dumb so try to give me more details!\n'
-                                 'For example: "Vivo City" will yield better results than "Vivo"')
+                                 'For example: "Jem Jurong East" & "NEX Serangoon" will yield better results.')
     # global prevrequest 
     
     return USERLOCATION
@@ -113,8 +113,21 @@ def mapquery(update: Update, context: CallbackContext) -> int:
     logger.info("%s queries map", user.first_name)
     reply_keyboard = [['Nice!', 'Nahh']]
 
-    global prevlocation 
+    global repeat
     global prevrequest 
+    global prevlocation 
+
+    if repeat == False:
+        update.message.reply_text(
+            'Okay here you go 😬',
+            reply_markup=ReplyKeyboardRemove(),
+        )
+    else: 
+        update.message.reply_text(
+            'Okay I try again 🥺',
+            reply_markup=ReplyKeyboardRemove(),
+        )
+    
 
     # prevrequest = update.message.text
     # logger.info("prevrequest is %s",prevrequest)
@@ -131,6 +144,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
     # global prevlocation
     # if prevlocation is None:
     #     prevlocation = update.message.text
+
     if prevlocation == None:
         prevlocation = update.message.text
         prevrequest = prevlocation
@@ -141,29 +155,19 @@ def mapquery(update: Update, context: CallbackContext) -> int:
     elif prevlocation == '/exit':
         return ConversationHandler.END
     logger.info("prevlocation is %s",prevlocation)
-
-
-
+    repeat = True
+    randomradius = random.randint(0,5000)
     query_result = google_places.nearby_search(
-        location= (prevlocation), keyword= 'restaurant',
-        radius= 100, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
-    logger.info("%s searched %s", user.first_name,update.message.text)
+        location= (prevlocation), keyword= 'food',
+        radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
+    logger.info("%s searched %s with radius of %d", user.first_name,prevlocation,randomradius)
     logger.info("query results are: %s",query_result.places)
 
-    update.message.reply_text('Okay here you go 😬')
-    
-    # delaytime = random.choice(QUERYDELAY)
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
-    #update.message.reply_text('delaytime is ' + delaytime)
-
-    # places = query_result.places[delaytime]
-
     logger.info("query result: %s",query_result.places[delaytime].name)
 
     for place in query_result.places:        
-        #update.message.reply_text('count is ' + count)
-        # if count == delaytime:
         query_result.places[delaytime].get_details()
         update.message.reply_text('Want to try ' + query_result.places[delaytime].name + ' ? 🤔\n'
                                     + query_result.places[delaytime].url)
@@ -171,7 +175,6 @@ def mapquery(update: Update, context: CallbackContext) -> int:
         context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
         for photo in query_result.places[delaytime].photos:
             photo.get(maxheight=500, maxwidth=500)
-            # query_result.places[delaytime].photo.get(maxheight=500, maxwidth=500)
             context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
             break
 
@@ -182,9 +185,6 @@ def mapquery(update: Update, context: CallbackContext) -> int:
                 reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
             )
         return ACTION
-
-
-
 
 def Nah(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
@@ -231,6 +231,39 @@ def randomplaces(update: Update, context: CallbackContext) -> int:
     return ACTION
 
 def places_random(update: Update, context: CallbackContext) -> int:
+    query_result = None
+    user = update.message.from_user
+    logger.info("%s selected random.", user.first_name)
+
+    randomradius = random.randint(0,15000)
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
+    query_result = google_places.nearby_search(
+        location= 'Singapore', keyword= 'food',
+        radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
+    logger.info("%s chose random with a radius of %d", user.first_name,randomradius)
+    logger.info("query results are: %s",query_result.places)
+
+    delaytime = random.randint(0,len(query_result.places)-1)
+    logger.info("delaytime is %f",delaytime)
+    logger.info("random result: %s",query_result.places[delaytime].name)
+
+    for place in query_result.places:        
+        query_result.places[delaytime].get_details()
+        update.message.reply_text('Okay, go to ' + query_result.places[delaytime].name + '😛\n'
+                                    + query_result.places[delaytime].url)
+        # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
+        context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        for photo in query_result.places[delaytime].photos:
+            photo.get(maxheight=500, maxwidth=500)
+            context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
+            break
+        return ConversationHandler.END
+
+'''
+def places_random(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected random.", user.first_name)
     randomlist = ['https://goo.gl/maps/P5C5nDYrn8G19LPT6','https://g.page/pollensingapore?share','https://goo.gl/maps/HAeyHWqV3vmDQnNs9',
@@ -265,7 +298,46 @@ def places_random(update: Update, context: CallbackContext) -> int:
         reply_markup=ReplyKeyboardRemove(),
     )
     return ConversationHandler.END
+'''
+def places_central(update: Update, context: CallbackContext) -> int:
+    user = update.message.from_user
+    logger.info("%s selected Central.", user.first_name)
+    reply_keyboard = [['Nice!', 'Lmao lame']]
 
+    randomradius = random.randint(0,5000)
+
+    query_result = google_places.nearby_search(
+        location= 'Central, Singapore', keyword= 'food',
+        radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
+    logger.info("%s chose Central with a radius of %d", user.first_name,randomradius)
+    logger.info("query results are: %s",query_result.places)
+
+    delaytime = random.randint(0,len(query_result.places)-1)
+    logger.info("delaytime is %f",delaytime)
+    logger.info("Central result: %s",query_result.places[delaytime].name)
+
+    for place in query_result.places:        
+        query_result.places[delaytime].get_details()
+        update.message.reply_text('Okay, want to try ' + query_result.places[delaytime].name + '?😛\n'
+                                    + query_result.places[delaytime].url)
+        # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
+        context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        for photo in query_result.places[delaytime].photos:
+            photo.get(maxheight=500, maxwidth=500)
+            context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
+            break
+        break
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
+    update.message.reply_text(
+        'Can ah?',
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
+    )
+    return ACTION
+
+'''
 def places_central(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected Central.", user.first_name)
@@ -290,7 +362,47 @@ def places_central(update: Update, context: CallbackContext) -> int:
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
     )
     return ACTION
+'''
 
+def places_east(update: Update, context: CallbackContext) -> int:
+    user = update.message.from_user
+    logger.info("%s selected East", user.first_name)
+    reply_keyboard = [['Nice!', 'Lmao lame']]
+
+    randomradius = random.randint(1000,5000)
+
+    query_result = google_places.nearby_search(
+        location= 'Tampines, Singapore', keyword= 'food',
+        radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
+    logger.info("%s chose East with a radius of %d", user.first_name,randomradius)
+    logger.info("query results are: %s",query_result.places)
+
+    delaytime = random.randint(0,len(query_result.places)-1)
+    logger.info("delaytime is %f",delaytime)
+    logger.info("East result: %s",query_result.places[delaytime].name)
+
+    for place in query_result.places:        
+        query_result.places[delaytime].get_details()
+        update.message.reply_text('Okay, want to try ' + query_result.places[delaytime].name + '?😛\n'
+                                    + query_result.places[delaytime].url)
+        # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
+        context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        for photo in query_result.places[delaytime].photos:
+            photo.get(maxheight=500, maxwidth=500)
+            context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
+            break
+        break
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
+    update.message.reply_text(
+        'Can ah?',
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
+    )
+    return ACTION
+
+'''
 def places_east(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected East", user.first_name)
@@ -314,7 +426,46 @@ def places_east(update: Update, context: CallbackContext) -> int:
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
     )
     return ACTION
+'''
+def places_west(update: Update, context: CallbackContext) -> int:
+    user = update.message.from_user
+    logger.info("%s selected West.", user.first_name)
+    reply_keyboard = [['Nice!', 'Lmao lame']]
 
+    randomradius = random.randint(0,5000)
+
+    query_result = google_places.nearby_search(
+        location= 'Jurong East, Singapore', keyword= 'food',
+        radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
+    logger.info("%s chose West with a radius of %d", user.first_name,randomradius)
+    logger.info("query results are: %s",query_result.places)
+
+    delaytime = random.randint(0,len(query_result.places)-1)
+    logger.info("delaytime is %f",delaytime)
+    logger.info("West result: %s",query_result.places[delaytime].name)
+
+    for place in query_result.places:        
+        query_result.places[delaytime].get_details()
+        update.message.reply_text('Okay, want to try ' + query_result.places[delaytime].name + '?😛\n'
+                                    + query_result.places[delaytime].url)
+        # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
+        context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        for photo in query_result.places[delaytime].photos:
+            photo.get(maxheight=500, maxwidth=500)
+            context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
+            break
+        break
+
+    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
+    sleep(random.choice(TYPESPEED))
+
+    update.message.reply_text(
+        'Can ah?',
+        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
+    )
+    return ACTION
+
+'''
 def places_west(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected West.", user.first_name)
@@ -338,7 +489,7 @@ def places_west(update: Update, context: CallbackContext) -> int:
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
     )
     return ACTION
-
+'''
 def ending(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s is exiting", user.first_name)
@@ -352,6 +503,8 @@ def ending(update: Update, context: CallbackContext) -> int:
     )
     global prevrequest
     global prevlocation
+    global repeat
+    repeat = False
     prevrequest = None
     prevlocation = None
     return ConversationHandler.END

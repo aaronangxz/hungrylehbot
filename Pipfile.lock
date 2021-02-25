@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ff88c5a52ef673c32238a5b0d9ed9b21baee787556a504f8ce2dbd5e8bcd6fa9"
+            "sha256": "80d55f91eefe0485b51d373432dee4eb40407661ccfac508d2d41e09b594e3c5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -29,6 +29,13 @@
                 "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
             ],
             "version": "==2020.12.5"
+        },
+        "python-google-places": {
+            "hashes": [
+                "sha256:0046f9c0d80d97838d3d4a554bdfa84c6c26d0b613b3e613598dadfd4b89bad4"
+            ],
+            "index": "pypi",
+            "version": "==1.4.2"
         },
         "python-telegram-bot": {
             "hashes": [

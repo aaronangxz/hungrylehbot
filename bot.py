@@ -173,6 +173,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
                                     + query_result.places[delaytime].url)
         # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
         context.bot.sendLocation(update.message.chat_id, latitude= query_result.places[delaytime].geo_location['lat'], longitude=query_result.places[delaytime].geo_location['lng'])
+        
         for photo in query_result.places[delaytime].photos:
             photo.get(maxheight=500, maxwidth=500)
             context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
@@ -259,8 +260,7 @@ def places_random(update: Update, context: CallbackContext) -> int:
         for photo in query_result.places[delaytime].photos:
             photo.get(maxheight=500, maxwidth=500)
             context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
-            break
-        return ConversationHandler.END
+            return ConversationHandler.END        
 
 '''
 def places_random(update: Update, context: CallbackContext) -> int:
@@ -572,7 +572,7 @@ def main():
                     MessageHandler(Filters.regex('^Lmao lame$'), ideas),
                     MessageHandler(Filters.regex('^Nahh$'), mapquery),
                     MessageHandler(Filters.regex('^Nice!$'), ending),
-                    MessageHandler(Filters.text, mapquery),
+                    #MessageHandler(Filters.text, mapquery),
                     CommandHandler("exit", exit)],
             USERLOCATION: [MessageHandler(Filters.text,mapquery)
                     ],

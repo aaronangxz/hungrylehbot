@@ -19,11 +19,16 @@ from telegram.ext import (
     CallbackContext,
 )
 from googleplaces import GooglePlaces, types, lang
-GOOGLEAPI = os.environ["GOOGLEAPI"]
-google_places = GooglePlaces(GOOGLEAPI)
+
 prevlocation = None
 prevrequest = None
 repeat = False
+chose_central = False
+chose_east = False
+chose_west = False
+
+GOOGLEAPI = os.environ["GOOGLEAPI"]
+google_places = GooglePlaces(GOOGLEAPI)
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ["TOKEN"]
 bot = telegram.Bot(token=TOKEN)
@@ -96,8 +101,10 @@ def ideas(update: Update, context: CallbackContext) -> int:
 def maprequest(update: Update, context: CallbackContext) -> int:
     update.message.reply_text('Where are you?\n'
                                  '(Type the name of the nearest mall / mrt / area)\n\n'
-                                 'I am still dumb so try to give me more details!\n'
-                                 'For example: "Jem Jurong East" & "NEX Serangoon" will yield better results.')
+                                 'I am slowly learning and slightly smarter now!\n'
+                                 'Try short names e.g. JEM, NEX, 313 etc. 😛\n\n'
+                                 'I will search through places within a 2km radius so sometimes it will be a little bit far away from the you 🥺\n'
+                                 'And also I have a tiny brain, forgive me if I repeat the same places 🙈' )
     # global prevrequest 
     
     return USERLOCATION
@@ -113,7 +120,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s queries map", user.first_name)
     reply_keyboard = [['Nice!', 'Nahh']]
-
+    global chose_central, chose_east, chose_west
     global repeat
     global prevrequest 
     global prevlocation 
@@ -150,7 +157,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
         prevlocation = update.message.text
         prevrequest = prevlocation
         logger.info("prevlocation is %s",prevlocation)
-    elif prevlocation == 'Nahh' or prevlocation == 'Near Me': 
+    elif prevlocation == 'Nahh' or prevlocation == 'Near Me' or prevlocation == "Lmao lame": 
         prevlocation = prevrequest
         logger.info("prevlocation is %s",prevlocation)
     elif prevlocation == '/exit':
@@ -158,10 +165,13 @@ def mapquery(update: Update, context: CallbackContext) -> int:
 
     logger.info("prevlocation is %s",prevlocation)
     repeat = True
-    randomradius = random.randint(0,2000)
+
+    if chose_central == True or chose_east == True or chose_west == True:
+        randomradius = random.randint(100,5000)
+    else: randomradius = random.randint(100,2000)
 
     query_result = google_places.nearby_search(
-        location= (prevlocation + ' Singapore'), keyword= 'food',
+        location= (prevlocation + ' Singapore'),
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s searched %s with radius of %d", user.first_name,prevlocation,randomradius)
     logger.info("query results are: %s",query_result.places)
@@ -244,7 +254,7 @@ def places_random(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected random.", user.first_name)
 
-    randomradius = random.randint(0,15000)
+    randomradius = random.randint(250,15000)
 
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     sleep(random.choice(TYPESPEED))
@@ -265,11 +275,11 @@ def places_random(update: Update, context: CallbackContext) -> int:
                                     + query_result.places[delaytime].url)
         # context.bot.sendLocation(update.message.chat_id, latitude= place.geo_location['lat'], longitude=place.geo_location['lng'])
         context.bot.sendLocation(update.message.chat_id, latitude= float(query_result.places[delaytime].geo_location['lat']), longitude=float(query_result.places[delaytime].geo_location['lng']))
-        
-        for photo in query_result.places[delaytime].photos:
-            photo.get(maxheight=500, maxwidth=500)
-            context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
-            return ConversationHandler.END        
+        break
+    for photo in query_result.places[delaytime].photos:
+        photo.get(maxheight=500, maxwidth=500)
+        context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
+        return ConversationHandler.END        
 
 '''
 def places_random(update: Update, context: CallbackContext) -> int:
@@ -312,6 +322,16 @@ def places_central(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected Central.", user.first_name)
     reply_keyboard = [['Nice!', 'Lmao lame']]
+
+    global repeat
+    global chose_central
+    global prevlocation
+    global prevrequest
+
+    repeat = True
+    chose_central = True
+    prevlocation = "Central"
+    prevrequest = prevlocation
 
     randomradius = random.randint(0,5000)
 
@@ -378,6 +398,15 @@ def places_east(update: Update, context: CallbackContext) -> int:
     logger.info("%s selected East", user.first_name)
     reply_keyboard = [['Nice!', 'Lmao lame']]
 
+    global prevlocation
+    global prevrequest
+    global repeat
+    global chose_east
+    prevlocation = "Tampines"
+    prevrequest = prevlocation
+    chose_east = True
+    repeat = True
+
     randomradius = random.randint(1000,5000)
 
     query_result = google_places.nearby_search(
@@ -440,6 +469,16 @@ def places_west(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected West.", user.first_name)
     reply_keyboard = [['Nice!', 'Lmao lame']]
+
+    global prevlocation
+    global prevrequest
+    global repeat
+    global chose_west
+
+    prevlocation = "Jurong East"
+    prevrequest = prevlocation
+    repeat = True
+    chose_west = True
 
     randomradius = random.randint(0,5000)
 
@@ -510,12 +549,14 @@ def ending(update: Update, context: CallbackContext) -> int:
         'Enjoy your meal!😋😋😋',
         reply_markup=ReplyKeyboardRemove()
     )
+    global chose_central, chose_east, chose_west
     global prevrequest
     global prevlocation
     global repeat
     repeat = False
     prevrequest = None
     prevlocation = None
+    chose_central = chose_east = chose_west = False
     return ConversationHandler.END
 
 def exit(update: Update, context: CallbackContext) -> int:
@@ -578,7 +619,7 @@ def main():
                     MessageHandler(Filters.regex('^West$'), places_west),
                     MessageHandler(Filters.regex('^Near me$'), maprequest),
                     MessageHandler(Filters.regex('^YES PLS$'), places_random),
-                    MessageHandler(Filters.regex('^Lmao lame$'), ideas),
+                    MessageHandler(Filters.regex('^Lmao lame$'), mapquery),
                     MessageHandler(Filters.regex('^Nahh$'), mapquery),
                     MessageHandler(Filters.regex('^Nice!$'), ending),
                     #MessageHandler(Filters.text, mapquery),

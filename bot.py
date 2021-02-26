@@ -307,15 +307,15 @@ def mapquery(update: Update, context: CallbackContext) -> int:
         location= (prevlocation + ' Singapore'),
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s searched %s with radius of %d", user.first_name,prevlocation,randomradius)
-    print(user.first_name + " searched " + prevlocation + " with a radius of " + str(randomradius) )
+    # print(user.first_name + " searched " + prevlocation + " with a radius of " + str(randomradius) )
     logger.info("query results are: %s",query_result.places)
-    print("Query results: " + query_result.places)
+    # print("Query results: " + query_result.places)
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
-    print("Random index is " + str(delaytime))
+    # print("Random index is " + str(delaytime))
     logger.info("query result: %s",query_result.places[delaytime].name)
-    print(user.first_name + " received result: " + query_result.places[delaytime].name)
+    # print(user.first_name + " received result: " + query_result.places[delaytime].name)
 
     for place in query_result.places:        
         query_result.places[delaytime].get_details()

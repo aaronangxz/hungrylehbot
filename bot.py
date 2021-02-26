@@ -81,7 +81,7 @@ def start(update: Update, context: CallbackContext) -> int:
 
 def ideas(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
-    reply_keyboard = [['Central', 'East','West','Near me']]
+    reply_keyboard = [['Central', 'East','West','Near me','Send Location']]
     logger.info("%s needs ideas", user.first_name)
 
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
@@ -92,6 +92,18 @@ def ideas(update: Update, context: CallbackContext) -> int:
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
     )
     return ACTION
+
+def location(update: Update, context: CallbackContext) -> int:
+    user = update.message.from_user
+    user_location = update.message.location
+    logger.info(
+        "Location of %s: %f / %f", user.first_name, user_location.latitude, user_location.longitude
+    )
+    update.message.reply_text(
+        'You are at' + user_location
+    )
+
+    return USERLOCATION
 
 # def getLocation(update, user_data):
 #     msg = update.message
@@ -573,6 +585,14 @@ def exit(update: Update, context: CallbackContext) -> int:
     update.message.reply_text(
         'Bye! Chat with me again next time ❤️', reply_markup=ReplyKeyboardRemove()
     )
+    global chose_central, chose_east, chose_west
+    global prevrequest
+    global prevlocation
+    global repeat
+    repeat = False
+    prevrequest = None
+    prevlocation = None
+    chose_central = chose_east = chose_west = False
     return ConversationHandler.END
 
 def help(update, context):

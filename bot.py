@@ -96,7 +96,7 @@ def ideas(update: Update, context: CallbackContext) -> int:
     return ACTION
 
 def location(update: Update, context: CallbackContext) -> int:
-    location_keyboard = KeyboardButton(text="send_location",  request_location=True)  
+    location_keyboard = KeyboardButton(text="Send Location📍",  request_location=True)  
     keyboard=[[location_keyboard]]
     user = update.message.from_user
     update.message.reply_text(
@@ -131,9 +131,9 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     # print("Nearby results: " + query_result.places[delaytime].name)
 
     if query_result.places == []:
-                update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
-                logger.info("No Results")
-                print(user.first_name + " received no results.")
+        update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
+        logger.info("No Results")
+        print(user.first_name + " received no results.")
     else: 
         for place in query_result.places:        
             # query_result.places.get_details()

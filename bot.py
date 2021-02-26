@@ -128,6 +128,9 @@ def getLocation(update: Update, context: CallbackContext) -> int:
             update.message.reply_text('Let me guess..you are at ' + query_result.places[0].name + ' now? 🤔\n')
             break
 
+    if query_result.places[0].name == 0:
+        update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
+    
     update.message.reply_text('Oops this is all I can do now, check back later!\n'
                                 'See /help for a list of other commands!')
     # logger.info("query results: %s",query_result[0].name)

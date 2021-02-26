@@ -309,7 +309,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
     logger.info("%s searched %s with radius of %d", user.first_name,prevlocation,randomradius)
     print(user.first_name + ": Searched " + prevlocation + " with a radius of " + str(randomradius) )
     logger.info("query results are: %s",query_result.places)
-    print("Query results: " + query_result.places)
+    # print("Query results: " + query_result.places)
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)

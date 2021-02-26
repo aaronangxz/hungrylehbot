@@ -97,13 +97,11 @@ def ideas(update: Update, context: CallbackContext) -> int:
 
 def location(update: Update, context: CallbackContext) -> int:
     location_keyboard = KeyboardButton(text="send_location",  request_location=True)  
-    custom_keyboard = [[ location_keyboard]]
-
     user = update.message.from_user
     update.message.reply_text(
         '[EXPERIMENTAL]\n'
         'Send me your location!',
-        reply_markup=custom_keyboard
+        reply_markup=ReplyKeyboardMarkup(location_keyboard, one_time_keyboard=True),
     )
     return USERLOCATION
 

@@ -19768,3 +19768,97 @@
 2021-02-26 18:28:58,163 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 2021-02-26 18:28:58,163 - apscheduler.scheduler - INFO - Scheduler has been shut down
 2021-02-26 18:28:58,331 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:34:25,731 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:34:49,229 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:34:57,363 - __main__ - INFO - Location of Xuan Ze: 1.298403 / 103.805111
+2021-02-26 19:34:57,505 - __main__ - INFO - query results are: []
+2021-02-26 19:35:59,213 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:35:59,213 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:35:59,372 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:36:01,003 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:36:09,450 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:36:15,798 - __main__ - INFO - Location of Xuan Ze: 1.298403 / 103.805111
+2021-02-26 19:36:15,854 - __main__ - INFO - query results are: []
+2021-02-26 19:36:31,933 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:36:31,933 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:36:32,097 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:36:33,535 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:36:42,422 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:36:49,098 - __main__ - INFO - Location of Xuan Ze: 1.298403 / 103.805111
+2021-02-26 19:36:49,155 - __main__ - INFO - query results are: []
+2021-02-26 19:39:03,341 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:39:03,341 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:39:03,495 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:39:25,935 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:39:39,060 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:39:45,716 - __main__ - INFO - Location of Xuan Ze: 1.298390 / 103.805107
+2021-02-26 19:39:45,822 - __main__ - INFO - query results: <GooglePlacesSearchResult with 0 result(s)>
+2021-02-26 19:39:45,822 - __main__ - INFO - query results are: []
+2021-02-26 19:40:07,220 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:40:07,220 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:40:07,381 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:40:08,698 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:40:19,203 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:40:27,188 - __main__ - INFO - Location of Xuan Ze: 1.298447 / 103.805107
+2021-02-26 19:40:27,324 - __main__ - INFO - query results: <GooglePlacesSearchResult with 0 result(s)>
+2021-02-26 19:40:27,324 - __main__ - INFO - query results are: []
+2021-02-26 19:40:41,114 - __main__ - INFO - Xuan Ze selected random.
+2021-02-26 19:40:43,103 - __main__ - INFO - Xuan Ze chose random with a radius of 1621
+2021-02-26 19:40:43,103 - __main__ - INFO - query results are: [<Place name="305 Family Restaurant", lat=1.3628599, lng=103.8332079>, <Place name="Subway", lat=1.3548349, lng=103.8308272>, <Place name="Burger King", lat=1.3545251, lng=103.8315792>, <Place name="A Love Story Cafe", lat=1.362002, lng=103.8329698>, <Place name="Chicken House", lat=1.3533869, lng=103.833555>, <Place name="Two Chefs Eating Place", lat=1.3631658, lng=103.8356134>, <Place name="Cafe Etc. Bistro & Bar", lat=1.3519213, lng=103.8351465>, <Place name="Swensen's", lat=1.3547006, lng=103.8307848>, <Place name="PocoLoco", lat=1.3522812, lng=103.8349765>, <Place name="Meng's Kitchen", lat=1.353602, lng=103.8344028>, <Place name="KFC", lat=1.354637, lng=103.830935>, <Place name="The Grumpy Bear", lat=1.3548791, lng=103.8308643>, <Place name="Peperoni Pizzeria @ Thomson", lat=1.3536172, lng=103.8332567>, <Place name="The Coriander Cafe, Thomson Plaza", lat=1.3546971, lng=103.8309888>, <Place name="Taste Of Thailand - Sin Ming", lat=1.3578311, lng=103.8337723>, <Place name="GRUB", lat=1.3649722, lng=103.8358919>, <Place name="The Black Sheep Cafe", lat=1.3534784, lng=103.8355969>, <Place name="Red Bowl Cafe", lat=1.354637, lng=103.830935>, <Place name="Esarn Thai Corner Thomson", lat=1.3528536, lng=103.8338258>, <Place name="So Good Char Chan Tang, Midview City", lat=1.3596052, lng=103.833788>]
+2021-02-26 19:40:43,104 - __main__ - INFO - delaytime is 12.000000
+2021-02-26 19:40:43,104 - __main__ - INFO - random result: Peperoni Pizzeria @ Thomson
+2021-02-26 19:40:52,687 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:41:08,037 - __main__ - INFO - Location of Xuan Ze: 1.296722 / 103.802467
+2021-02-26 19:41:08,146 - __main__ - INFO - query results: <GooglePlacesSearchResult with 0 result(s)>
+2021-02-26 19:41:08,147 - __main__ - INFO - query results are: []
+2021-02-26 19:41:23,592 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:41:23,593 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:41:23,866 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:41:25,353 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:41:34,566 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:41:40,776 - __main__ - INFO - Location of Xuan Ze: 1.298434 / 103.805104
+2021-02-26 19:41:41,124 - __main__ - INFO - query results: <GooglePlacesSearchResult with 20 result(s)>
+2021-02-26 19:41:41,124 - __main__ - INFO - query results are: [<Place name="Singapore", lat=1.3553794, lng=103.8677444>, <Place name="Queenstown Public Library", lat=1.2986449, lng=103.8051823>, <Place name="Cafe Galilee (Queenstown Public Library)", lat=1.2985967, lng=103.8052068>, <Place name="Opp Queenstown Lib", lat=1.298454, lng=103.805>, <Place name="Kim Hiap Seng", lat=1.2986795, lng=103.8048068>, <Place name="Golden Palace Photo Studio", lat=1.297981, lng=103.80506>, <Place name="First Clinic", lat=1.297981, lng=103.80506>, <Place name="34 SkyResidence@Dawson", lat=1.2983267, lng=103.804634>, <Place name="Transit Point", lat=1.299029, lng=103.804808>, <Place name="Former Queenstown Polyclinic", lat=1.2990381, lng=103.8046509>, <Place name="Nasi Padang", lat=1.2986953, lng=103.8042662>, <Place name="Quan Ji Chicken Rice", lat=1.2986953, lng=103.8042662>, <Place name="Ang Mo Kio 5023", lat=1.2986953, lng=103.8042662>, <Place name="Chicken with a Difference Hainanese Chicken Rice", lat=1.2986953, lng=103.8042662>, <Place name="Hock Beng Coffee Stall", lat=1.2986953, lng=103.8042662>, <Place name="Queenstown Snacks Stall", lat=1.2986953, lng=103.8042662>, <Place name="Xin Lu", lat=1.2986953, lng=103.8042662>, <Place name="Tian Ee Coffee Stall", lat=1.2986953, lng=103.8042662>, <Place name="He Ji Fish Ball Kway Teow Mee", lat=1.2986953, lng=103.8042662>, <Place name="Queenstown", lat=1.2941664, lng=103.7861271>]
+2021-02-26 19:51:51,204 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:51:51,204 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:51:51,360 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:51:52,348 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:52:03,506 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:52:10,158 - __main__ - INFO - Location of Xuan Ze: 1.298444 / 103.805121
+2021-02-26 19:52:10,305 - __main__ - INFO - query results: <GooglePlacesSearchResult with 0 result(s)>
+2021-02-26 19:52:10,305 - __main__ - INFO - query results are: []
+2021-02-26 19:52:51,700 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:53:05,594 - __main__ - INFO - Location of Xuan Ze: 1.304294 / 103.809883
+2021-02-26 19:53:05,715 - __main__ - INFO - query results: <GooglePlacesSearchResult with 0 result(s)>
+2021-02-26 19:53:05,715 - __main__ - INFO - query results are: []
+2021-02-26 19:53:50,344 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:53:50,344 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:53:50,503 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:53:51,534 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:54:03,360 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:54:10,902 - __main__ - INFO - Location of Xuan Ze: 1.298430 / 103.805117
+2021-02-26 19:54:11,018 - __main__ - INFO - query results: <GooglePlacesSearchResult with 0 result(s)>
+2021-02-26 19:54:11,018 - __main__ - INFO - query results are: []
+2021-02-26 19:54:21,810 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:54:33,515 - __main__ - INFO - Location of Xuan Ze: 1.293362 / 103.802562
+2021-02-26 19:54:33,894 - __main__ - INFO - query results: <GooglePlacesSearchResult with 3 result(s)>
+2021-02-26 19:54:33,894 - __main__ - INFO - query results are: [<Place name="Just Accounting Pte. Ltd.", lat=1.2926445, lng=103.8027441>, <Place name="Singapore Experienced Xero Bookkeeping Payroll ACRA Annual Return IRS GST Tax Return Restaurant Point of Sales EPOS IPOS Services", lat=1.292921, lng=103.8056418>, <Place name="Soo Geok Keen & Co", lat=1.2914582, lng=103.8056418>]
+2021-02-26 19:56:09,370 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:56:09,371 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:56:09,525 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:56:10,547 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:56:19,979 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:56:29,003 - __main__ - INFO - Location of Xuan Ze: 1.293362 / 103.802562
+2021-02-26 19:56:29,135 - __main__ - INFO - query results: <GooglePlacesSearchResult with 0 result(s)>
+2021-02-26 19:56:29,136 - __main__ - INFO - query results are: []
+2021-02-26 19:56:43,913 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:56:43,913 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:56:44,078 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 19:56:44,983 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 19:56:54,322 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 19:57:02,413 - __main__ - INFO - Location of Xuan Ze: 1.293362 / 103.802562
+2021-02-26 19:57:02,514 - __main__ - INFO - query results: <GooglePlacesSearchResult with 0 result(s)>
+2021-02-26 19:57:02,515 - __main__ - INFO - query results are: []
+2021-02-26 19:57:40,372 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 19:57:40,372 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 19:57:40,520 - telegram.ext.updater - WARNING - Exiting immediately!

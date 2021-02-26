@@ -118,19 +118,100 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     
     query_result = google_places.nearby_search(
         lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},
-        radius= 100,types=[types.TYPE_SHOPPING_MALL,types.TYPE_TRAIN_STATION,types.TYPE_POINT_OF_INTEREST])
+        radius= 500, types=[types.TYPE_AIRPORT,
+                            types.TYPE_AMUSEMENT_PARK,
+                            types.TYPE_AQUARIUM,
+                            types.TYPE_ART_GALLERY,
+                            types.TYPE_ATM,
+                            types.TYPE_BAKERY,
+                            types.TYPE_BANK,
+                            types.TYPE_BAR,
+                            types.TYPE_BOOK_STORE,
+                            types.TYPE_BOWLING_ALLEY,
+                            types.TYPE_BUS_STATION,
+                            types.TYPE_CAFE,
+                            types.TYPE_CAMPGROUND,
+                            types.TYPE_CASINO,
+                            types.TYPE_CHURCH,
+                            types.TYPE_CITY_HALL,
+                            types.TYPE_CLOTHING_STORE,
+                            types.TYPE_CONVENIENCE_STORE ,
+                            types.TYPE_COURTHOUSE ,
+                            types.TYPE_DENTIST,
+                            types.TYPE_DEPARTMENT_STORE ,
+                            types.TYPE_DOCTOR,
+                            types.TYPE_ELECTRONICS_STORE ,
+                            types.TYPE_EMBASSY ,
+                            types.TYPE_ESTABLISHMENT ,
+                            types.TYPE_FINANCE ,
+                            types.TYPE_FIRE_STATION ,
+                            types.TYPE_FLORIST ,
+                            types.TYPE_FOOD ,
+                            types.TYPE_FURNITURE_STORE ,
+                            types.TYPE_GAS_STATION ,
+                            types.TYPE_GROCERY_OR_SUPERMARKET ,
+                            types.TYPE_GYM,
+                            types.TYPE_HAIR_CARE ,
+                            types.TYPE_HEALTH,
+                            types.TYPE_HOME_GOODS_STORE ,
+                            types.TYPE_HOSPITAL,
+                            types.TYPE_INSURANCE_AGENCY ,
+                            types.TYPE_JEWELRY_STORE ,
+                            types.TYPE_LIBRARY,
+                            types.TYPE_LIQUOR_STORE ,
+                            types.TYPE_LOCAL_GOVERNMENT_OFFICE,
+                            types.TYPE_LODGING ,
+                            types.TYPE_MEAL_DELIVERY ,
+                            types.TYPE_MEAL_TAKEAWAY ,
+                            types.TYPE_MOSQUE ,
+                            types.TYPE_MOVIE_RENTAL ,
+                            types.TYPE_MOVIE_THEATER ,
+                            types.TYPE_MOVING_COMPANY ,
+                            types.TYPE_MUSEUM,
+                            types.TYPE_NIGHT_CLUB ,
+                            types.TYPE_PAINTER,
+                            types.TYPE_PARK,
+                            types.TYPE_PARKING,
+                            types.TYPE_PET_STORE ,
+                            types.TYPE_PHARMACY ,
+                            types.TYPE_PHYSIOTHERAPIST ,
+                            types.TYPE_PLACE_OF_WORSHIP,
+                            types.TYPE_PLUMBER ,
+                            types.TYPE_POLICE ,
+                            types.TYPE_POST_OFFICE ,
+                            types.TYPE_REAL_ESTATE_AGENCY ,
+                            types.TYPE_RESTAURANT ,
+                            types.TYPE_ROOFING_CONTRACTOR,
+                            types.TYPE_RV_PARK,
+                            types.TYPE_SCHOOL ,
+                            types.TYPE_SHOE_STORE ,
+                            types.TYPE_SHOPPING_MALL ,
+                            types.TYPE_SPA,
+                            types.TYPE_STADIUM ,
+                            types.TYPE_STORAGE ,
+                            types.TYPE_STORE ,
+                            types.TYPE_SUBWAY_STATION ,
+                            types.TYPE_SYNAGOGUE,
+                            types.TYPE_TAXI_STAND ,
+                            types.TYPE_TRAIN_STATION ,
+                            types.TYPE_TRAVEL_AGENCY ,
+                            types.TYPE_UNIVERSITY,
+                            types.TYPE_VETERINARY_CARE ,
+                            types.TYPE_ZOO])
     # delaytime = random.randint(0,len(query_result.places)-1)
 
+    logger.info("query results: %s",query_result)
     logger.info("query results are: %s",query_result.places)
 
-    for place in query_result.places:        
-            # query_result.places.get_details()
-            if not query_result.places[0].name:
+
+    if query_result.places == []:
                 update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
-            else: update.message.reply_text('Let me guess..you are at ' + query_result.places[0].name + ' now? 🤔\n')
+    else: 
+        for place in query_result.places:        
+            # query_result.places.get_details()
+            update.message.reply_text('Let me guess..you are at ' + query_result.places[0].name + ' now? 🤔\n')
             break
 
-    
     
     update.message.reply_text('Oops this is all I can do now, check back later!\n'
                                 'See /help for a list of other commands!')

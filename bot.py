@@ -447,7 +447,7 @@ def places_central(update: Update, context: CallbackContext) -> int:
     logger.info("%s chose Central with a radius of %d", user.first_name,randomradius)
     logger.info("query results are: %s",query_result.places)
     print(user.first_name + ": Selected Central with radius of " +  str(randomradius))
-    print("Query results are: " + query_result.places)
+    # print("Query results are: " + query_result.places)
 
 
     delaytime = random.randint(0,len(query_result.places)-1)
@@ -500,7 +500,7 @@ def places_east(update: Update, context: CallbackContext) -> int:
     logger.info("%s chose East with a radius of %d", user.first_name,randomradius)
     logger.info("query results are: %s",query_result.places)
     print(user.first_name + ": Selected East with radius of " +  str(randomradius))
-    print("Query results are: " + query_result.places)
+    # print("Query results are: " + query_result.places)
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
@@ -553,7 +553,7 @@ def places_west(update: Update, context: CallbackContext) -> int:
     logger.info("%s chose West with a radius of %d", user.first_name,randomradius)
     logger.info("query results are: %s",query_result.places)
     print(user.first_name + ": Selected West with radius of " +  str(randomradius))
-    print("Query results are: " + query_result.places)
+    # print("Query results are: " + query_result.places)
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)

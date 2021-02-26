@@ -68,7 +68,7 @@ def start(update: Update, context: CallbackContext) -> int:
         'Helloo ' + user.first_name + ', this is Patrick 🤓\n',
         reply_markup=ReplyKeyboardRemove(),
     )
-    print(user.first_name + "logged in")
+    print(user.first_name + " logged in")
 
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     sleep(random.choice(TYPESPEED))
@@ -84,7 +84,7 @@ def ideas(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     reply_keyboard = [['Central', 'East','West','Near me','Send Location']]
     logger.info("%s needs ideas", user.first_name)
-    print(user.first_name + "needs ideas.")
+    print(user.first_name + " needs ideas.")
 
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     sleep(random.choice(TYPESPEED))
@@ -117,7 +117,8 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     # update.message.reply_text(
     #     'Your location is ' + str(user_location.latitude) + ', ' + str(user_location.longitude)
     # )
-    
+    print(user.first_name + " sent location: " + user_location.latitude + " ," + user_location.longitude)
+
     query_result = google_places.nearby_search(
         lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},
         radius= 500, types=[types.TYPE_AIRPORT,
@@ -209,15 +210,15 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     if query_result.places == []:
                 update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
                 logger.info("No Results")
+                print(user.first_name + " received no rsults.")
 
     else: 
         for place in query_result.places:        
             # query_result.places.get_details()
             update.message.reply_text('Let me guess..you are at ' + query_result.places[0].name + ' now? 🤔\n')
             logger.info("Return results: %s",query_result.places[0])
-
+            print(user.first_name + " received result: " + query_result.places[0])
             break
-
     
     update.message.reply_text('Oops this is all I can do now, check back later!\n'
                                 'See /help for a list of other commands!')
@@ -249,6 +250,7 @@ def maprequest_again(update: Update, context: CallbackContext) -> int:
 def mapquery(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s queries map", user.first_name)
+    print(user.first_name + " queries map.")
     reply_keyboard = [['Nice!', 'Nahh']]
     global chose_central, chose_east, chose_west
     global repeat
@@ -293,6 +295,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
     elif prevlocation == '/exit':
         return ConversationHandler.END
 
+    print(user.first_name + "'s prevlocation is " + prevlocation)
     logger.info("prevlocation is %s",prevlocation)
     repeat = True
 
@@ -304,11 +307,15 @@ def mapquery(update: Update, context: CallbackContext) -> int:
         location= (prevlocation + ' Singapore'),
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s searched %s with radius of %d", user.first_name,prevlocation,randomradius)
+    print(user.first_name + " searched " + prevlocation + " with a radius of " + randomradius )
     logger.info("query results are: %s",query_result.places)
+    print("Query results: " + query_result.places)
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
+    print("Random index is " + delaytime)
     logger.info("query result: %s",query_result.places[delaytime].name)
+    print(user.first_name + " received result: " + query_result.places[delaytime].name)
 
     for place in query_result.places:        
         query_result.places[delaytime].get_details()
@@ -337,7 +344,8 @@ def mapquery(update: Update, context: CallbackContext) -> int:
 
 def Nah(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
-    logger.info("%s is not hungry.", user.first_name)
+    logger.info("%s is not hungry and exited.", user.first_name)
+    print(user.first_name + " is not hungry.")
 
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     sleep(random.choice(TYPESPEED))
@@ -365,6 +373,7 @@ def randomplaces(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     reply_keyboard = [['YES PLS']]
     logger.info("%s selected random.", user.first_name)
+    print(user.first_name + " selected random.")
 
     update.message.reply_text(
         'Anything your head🙄🙄'
@@ -383,6 +392,7 @@ def places_random(update: Update, context: CallbackContext) -> int:
     query_result = None
     user = update.message.from_user
     logger.info("%s selected random.", user.first_name)
+    print(user.first_name + " selected random.")
 
     randomradius = random.randint(250,15000)
 
@@ -393,11 +403,13 @@ def places_random(update: Update, context: CallbackContext) -> int:
         location= 'Singapore', keyword= 'food',
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s chose random with a radius of %d", user.first_name,randomradius)
+    print(user.first_name + " selected random with a radius of " + randomradius)
     logger.info("query results are: %s",query_result.places)
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
     logger.info("random result: %s",query_result.places[delaytime].name)
+    print(user.first_name + " received result: " + query_result.places[delaytime].name)
 
     for place in query_result.places:        
         query_result.places[delaytime].get_details()
@@ -451,6 +463,7 @@ def places_random(update: Update, context: CallbackContext) -> int:
 def places_central(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected Central.", user.first_name)
+    print(user.first_name + " selected central.")
     reply_keyboard = [['Nice!', 'Lmao lame']]
 
     global repeat
@@ -526,6 +539,8 @@ def places_central(update: Update, context: CallbackContext) -> int:
 def places_east(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected East", user.first_name)
+    print(user.first_name + " selected East.")
+
     reply_keyboard = [['Nice!', 'Lmao lame']]
 
     global prevlocation
@@ -598,6 +613,8 @@ def places_east(update: Update, context: CallbackContext) -> int:
 def places_west(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected West.", user.first_name)
+    print(user.first_name + " selected West")
+
     reply_keyboard = [['Nice!', 'Lmao lame']]
 
     global prevlocation
@@ -679,6 +696,7 @@ def ending(update: Update, context: CallbackContext) -> int:
         'Enjoy your meal!😋😋😋',
         reply_markup=ReplyKeyboardRemove()
     )
+    print(user.first_name + " ended one cycle.")
     global chose_central, chose_east, chose_west
     global prevrequest
     global prevlocation
@@ -701,6 +719,7 @@ def exit(update: Update, context: CallbackContext) -> int:
     update.message.reply_text(
         'Bye! Chat with me again next time ❤️', reply_markup=ReplyKeyboardRemove()
     )
+    print(user.first_name + " exited.")
     global chose_central, chose_east, chose_west
     global prevrequest
     global prevlocation
@@ -712,7 +731,10 @@ def exit(update: Update, context: CallbackContext) -> int:
     return ConversationHandler.END
 
 def help(update, context):
+    user = update.message.from_user
     """Send a message when the command /help is issued."""
+    print(user.first_name + " viewed help.")
+
     update.message.reply_text('Hello! Welcome to Hungry Leh. Patrick will try his best to help you decide what to eat.\n\n'
                                 '🍔Commands\n'
                                 '/start to start asking\n'

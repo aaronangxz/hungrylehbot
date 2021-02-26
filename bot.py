@@ -68,7 +68,7 @@ def start(update: Update, context: CallbackContext) -> int:
         'Helloo ' + user.first_name + ', this is Patrick 🤓\n',
         reply_markup=ReplyKeyboardRemove(),
     )
-    print("%s logged in", user.first_name)
+    print(user.first_name + "logged in")
 
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     sleep(random.choice(TYPESPEED))
@@ -84,6 +84,7 @@ def ideas(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     reply_keyboard = [['Central', 'East','West','Near me','Send Location']]
     logger.info("%s needs ideas", user.first_name)
+    print(user.first_name + "needs ideas.")
 
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     sleep(random.choice(TYPESPEED))

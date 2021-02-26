@@ -9,7 +9,7 @@ import telegram
 import json
 from time import sleep 
 #from random import random 
-from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, ParseMode, Bot
+from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update, ParseMode, Bot, KeyboardButton
 from telegram.ext import (
     Updater,
     CommandHandler,
@@ -96,10 +96,14 @@ def ideas(update: Update, context: CallbackContext) -> int:
     return ACTION
 
 def location(update: Update, context: CallbackContext) -> int:
+    location_keyboard = KeyboardButton(text="send_location",  request_location=True)  
+    custom_keyboard = [[ location_keyboard]]
+
     user = update.message.from_user
     update.message.reply_text(
-        'Send me you location!\n'
-        'Attach > Location > Send My Location'
+        '[EXPERIMENTAL]\n'
+        'Send me your location!',
+        reply_markup=custom_keyboard
     )
     return USERLOCATION
 
@@ -118,7 +122,7 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     #     'Your location is ' + str(user_location.latitude) + ', ' + str(user_location.longitude)
     # )
     print(user.first_name + " sent location: " + str(user_location.latitude) + " ," + str(user_location.longitude))
-    print("Place: " + user_location.name)
+    # print("Place: " + user_location.name)
     query_result = google_places.nearby_search(
         lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},radius= 50, types = [types.TYPE_SHOPPING_MALL,types.TYPE_DEPARTMENT_STORE, types.TYPE_TRAIN_STATION])
     delaytime = random.randint(0,len(query_result.places)-1)

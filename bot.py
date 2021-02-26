@@ -118,18 +118,19 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     
     query_result = google_places.nearby_search(
         lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},
-        radius= 100,types=[types.TYPE_SHOPPING_MALL,types.TYPE_TRAIN_STATION])
+        radius= 100,types=[types.TYPE_SHOPPING_MALL,types.TYPE_TRAIN_STATION,types.TYPE_POINT_OF_INTEREST])
     # delaytime = random.randint(0,len(query_result.places)-1)
 
     logger.info("query results are: %s",query_result.places)
 
     for place in query_result.places:        
             # query_result.places.get_details()
-            update.message.reply_text('Let me guess..you are at ' + query_result.places[0].name + ' now? 🤔\n')
+            if not query_result.places[0].name:
+                update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
+            else: update.message.reply_text('Let me guess..you are at ' + query_result.places[0].name + ' now? 🤔\n')
             break
 
-    if query_result.places[0].name == 0:
-        update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
+    
     
     update.message.reply_text('Oops this is all I can do now, check back later!\n'
                                 'See /help for a list of other commands!')

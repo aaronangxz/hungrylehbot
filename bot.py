@@ -63,11 +63,12 @@ def start(update: Update, context: CallbackContext) -> int:
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     sleep(random.choice(TYPESPEED))
     # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
-    
+
     update.message.reply_text(
         'Helloo ' + user.first_name + ', this is Patrick 🤓\n',
         reply_markup=ReplyKeyboardRemove(),
     )
+    print("%s logged in", user.first_name)
 
     context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
     sleep(random.choice(TYPESPEED))
@@ -206,10 +207,14 @@ def getLocation(update: Update, context: CallbackContext) -> int:
 
     if query_result.places == []:
                 update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
+                logger.info("No Results")
+
     else: 
         for place in query_result.places:        
             # query_result.places.get_details()
             update.message.reply_text('Let me guess..you are at ' + query_result.places[0].name + ' now? 🤔\n')
+            logger.info("Return results: %s",query_result.places[0])
+
             break
 
     

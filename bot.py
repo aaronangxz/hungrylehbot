@@ -95,22 +95,23 @@ def ideas(update: Update, context: CallbackContext) -> int:
 
 def location(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
+    return USERLOCATION
+
+def getLocation(update: Update, context: CallbackContext) -> int:
+    # msg = update.message
+    # user_data['msg'] = msg
+    # user_data['id'] = update.update_id
+    # update.message.reply_text('lat: {}, lng: {}'.format(
+    #     msg.location.latitude, msg.location.longitude))
+    user = update.message.from_user
     user_location = update.message.location
     logger.info(
         "Location of %s: %f / %f", user.first_name, user_location.latitude, user_location.longitude
     )
     update.message.reply_text(
-        'You are at' + user_location
+        'Your location is ' + user_location.latitude + ', ' + user_location.longitude
     )
-
-    return USERLOCATION
-
-# def getLocation(update, user_data):
-#     msg = update.message
-#     user_data['msg'] = msg
-#     user_data['id'] = update.update_id
-#     update.message.reply_text('lat: {}, lng: {}'.format(
-#         msg.location.latitude, msg.location.longitude))
+    return ConversationHandler.END
 
 def maprequest(update: Update, context: CallbackContext) -> int:
     update.message.reply_text('Where are you?\n'
@@ -653,6 +654,7 @@ def main():
                     CommandHandler("exit", exit),
                     CommandHandler("help", help)],
             USERLOCATION: [MessageHandler(Filters.text,mapquery),
+                        MessageHandler(Filters.location, getLocation),
                         CommandHandler('random', places_random),
                         CommandHandler("exit", exit),
                         CommandHandler("help", help)],

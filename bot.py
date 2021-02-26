@@ -205,7 +205,7 @@ def getLocation(update: Update, context: CallbackContext) -> int:
 
     logger.info("query results: %s",query_result)
     logger.info("query results are: %s",query_result.places)
-
+    print("Nearby results: " + query_result.places)
 
     if query_result.places == []:
                 update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
@@ -307,7 +307,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
         location= (prevlocation + ' Singapore'),
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s searched %s with radius of %d", user.first_name,prevlocation,randomradius)
-    print(user.first_name + " searched " + prevlocation + " with a radius of " + str(randomradius) )
+    print(user.first_name + ": Searched " + prevlocation + " with a radius of " + str(randomradius) )
     logger.info("query results are: %s",query_result.places)
     print("Query results: " + query_result.places)
 
@@ -315,7 +315,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
     logger.info("delaytime is %f",delaytime)
     # print("Random index is " + str(delaytime))
     logger.info("query result: %s",query_result.places[delaytime].name)
-    print(user.first_name + " received result: " + query_result.places[delaytime].name)
+    print(user.first_name + ": Received result: " + query_result.places[delaytime].name)
 
     for place in query_result.places:        
         query_result.places[delaytime].get_details()
@@ -373,7 +373,7 @@ def randomplaces(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     reply_keyboard = [['YES PLS']]
     logger.info("%s selected random.", user.first_name)
-    print(user.first_name + " selected random.")
+    print(user.first_name + ": Selected random.")
 
     update.message.reply_text(
         'Anything your head🙄🙄'
@@ -392,7 +392,7 @@ def places_random(update: Update, context: CallbackContext) -> int:
     query_result = None
     user = update.message.from_user
     logger.info("%s selected random.", user.first_name)
-    print(user.first_name + " selected random.")
+    print(user.first_name + ": Selected random.")
 
     randomradius = random.randint(250,15000)
 
@@ -403,13 +403,13 @@ def places_random(update: Update, context: CallbackContext) -> int:
         location= 'Singapore', keyword= 'food',
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s chose random with a radius of %d", user.first_name,randomradius)
-    print(user.first_name + " selected random with a radius of " + str(randomradius))
+    print(user.first_name + ": Selected random with a radius of " + str(randomradius))
     logger.info("query results are: %s",query_result.places)
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
     logger.info("random result: %s",query_result.places[delaytime].name)
-    print(user.first_name + " received result: " + query_result.places[delaytime].name)
+    print(user.first_name + ": Generated index "+ str(delaytime) + " and received result: " + query_result.places[delaytime].name)
 
     for place in query_result.places:        
         query_result.places[delaytime].get_details()
@@ -423,47 +423,10 @@ def places_random(update: Update, context: CallbackContext) -> int:
         context.bot.sendPhoto(chat_id=update.message.chat_id,photo = photo.url)
         return ConversationHandler.END        
 
-'''
-def places_random(update: Update, context: CallbackContext) -> int:
-    user = update.message.from_user
-    logger.info("%s selected random.", user.first_name)
-    randomlist = ['https://goo.gl/maps/P5C5nDYrn8G19LPT6','https://g.page/pollensingapore?share','https://goo.gl/maps/HAeyHWqV3vmDQnNs9',
-                    'https://g.page/OverEasySG?share','https://g.page/theassemblygroundcineleisure?share','https://goo.gl/maps/o8DuJkroyoSK1MqK9',
-                    'https://goo.gl/maps/1iX2BCbDSKWUVepm7','https://goo.gl/maps/G4cv4uBhP3ve7soc8','https://goo.gl/maps/DGzoTrv45uD8HXKw5',
-                    'https://goo.gl/maps/YKWo1ckMJ3qeEXVZA','https://g.page/wangdaebakbbq?share','https://goo.gl/maps/Fftfy929T1dS7V6t7',
-                    'https://goo.gl/maps/3TANCBdHR9kfVm1w5','https://goo.gl/maps/LAhF4yuABZpGvHgr7','https://goo.gl/maps/rkNoBPjYK5LtK2Ax8',
-                    'https://g.page/prego-sg?share','https://goo.gl/maps/74wZZ3vUwj3aFmGGA','https://g.page/jibiru?share',
-                    'https://g.page/menbaka_sg?share','https://g.page/HaidilaoIMM?share','https://goo.gl/maps/x5e4Ro9NxgucRHjM8',
-                    'https://g.page/BrotzeitWestgate?share','https://goo.gl/maps/UR37N1bBYAHfyPLN8','https://goo.gl/maps/QL6kJ1Hu9MxL3wVQ8',
-                    'https://goo.gl/maps/JWNgN5uFBGo1FjTx8','https://goo.gl/maps/9hmwFiL9DC5ugpEN8','https://g.page/ENSakaba-JEM?share',
-                    'https://goo.gl/maps/qDeTVYc9RxSbU9rv8','https://goo.gl/maps/Gz2XCxEdNP5oomxu7','https://goo.gl/maps/5VtjHapbwQ714RmF6',
-                    'https://goo.gl/maps/MENsUrKojYjeVP649','https://goo.gl/maps/n3zcrLJZsXkZYiwT8','https://goo.gl/maps/v5MJhQGfwMrDy2d9A',
-                    'https://g.page/OPPABBQ?share','https://g.page/burger-lobster-jewel-changi?share','https://goo.gl/maps/u7DJozX5Knsno5Gq6',
-                    'https://g.page/elfuegosg?share','https://g.page/TanukiRawJewel?share','https://goo.gl/maps/Et4cABQ1rMkbe4u5A',
-                    'https://goo.gl/maps/TLAJvBSW6bY9A4Kw5','https://goo.gl/maps/GYPWsS6sYiDVa7xQA','https://goo.gl/maps/fGzi5m6hUJcYBSBE9',
-                    'https://goo.gl/maps/xDcAHz7fWh4aF8kL8','https://goo.gl/maps/ZCb5nQAVZRrii7Ab9','https://goo.gl/maps/3KhF4bfoRwtr9Tid8',
-                    'https://goo.gl/maps/CrKBC3PQcaL5sU1M9','https://g.page/itacho-sushi-bedok-mall?share','https://goo.gl/maps/VoMsTWLwSMMMf1g88',
-                    'https://goo.gl/maps/HKGCTcCXar1u9jN87','https://g.page/tonito-latin-american-kitchen?share','https://goo.gl/maps/B9MC5B9wYBdzFhG17',
-                    'https://goo.gl/maps/nub6Auhu9TdnB14z7','https://goo.gl/maps/JU4gyNxV6qY1VXzbA'
-                ]
-    #bot.sendLocation(@hungrylehbot, latitude=lat, longitude=lon),
-    update.message.reply_text(
-        random.choice(randomlist),
-        reply_markup=ReplyKeyboardRemove(),
-    )    
-    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    sleep(random.choice(TYPESPEED))
-    
-    update.message.reply_text(
-        'Nah, enjoy😛',
-        reply_markup=ReplyKeyboardRemove(),
-    )
-    return ConversationHandler.END
-'''
 def places_central(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected Central.", user.first_name)
-    print(user.first_name + " selected central.")
+    print(user.first_name + ": Selected central.")
     reply_keyboard = [['Nice!', 'Lmao lame']]
 
     global repeat
@@ -483,10 +446,14 @@ def places_central(update: Update, context: CallbackContext) -> int:
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s chose Central with a radius of %d", user.first_name,randomradius)
     logger.info("query results are: %s",query_result.places)
+    print(user.first_name + ": Selected Central with radius of " +  str(randomradius))
+    print("Query results are: " + query_result.places)
+
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
     logger.info("Central result: %s",query_result.places[delaytime].name)
+    print(user.first_name + ": Generated index " +  str(randomradius) + " and received result: " + query_result.places[delaytime].name)
 
     for place in query_result.places:        
         query_result.places[delaytime].get_details()
@@ -508,33 +475,6 @@ def places_central(update: Update, context: CallbackContext) -> int:
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
     )
     return ACTION
-
-'''
-def places_central(update: Update, context: CallbackContext) -> int:
-    user = update.message.from_user
-    logger.info("%s selected Central.", user.first_name)
-    reply_keyboard = [['Nice!', 'Lmao lame']]
-    centrallist = ['https://goo.gl/maps/P5C5nDYrn8G19LPT6','https://g.page/pollensingapore?share','https://goo.gl/maps/HAeyHWqV3vmDQnNs9',
-                    'https://g.page/OverEasySG?share','https://g.page/theassemblygroundcineleisure?share','https://goo.gl/maps/o8DuJkroyoSK1MqK9',
-                    'https://goo.gl/maps/1iX2BCbDSKWUVepm7','https://goo.gl/maps/G4cv4uBhP3ve7soc8','https://goo.gl/maps/DGzoTrv45uD8HXKw5',
-                    'https://goo.gl/maps/YKWo1ckMJ3qeEXVZA','https://g.page/wangdaebakbbq?share','https://goo.gl/maps/Fftfy929T1dS7V6t7','https://goo.gl/maps/3TANCBdHR9kfVm1w5',
-                    'https://goo.gl/maps/LAhF4yuABZpGvHgr7','https://goo.gl/maps/rkNoBPjYK5LtK2Ax8','https://g.page/prego-sg?share','https://goo.gl/maps/74wZZ3vUwj3aFmGGA',
-                    'https://g.page/jibiru?share','https://g.page/menbaka_sg?share','https://goo.gl/maps/B9MC5B9wYBdzFhG17'
-                    ]
-    #bot.sendLocation(@hungrylehbot, latitude=lat, longitude=lon),
-    update.message.reply_text(
-        random.choice(centrallist),
-        reply_markup=ReplyKeyboardRemove(),
-    )    
-    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    sleep(random.choice(TYPESPEED))
-
-    update.message.reply_text(
-        'Can ah?',
-        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
-    )
-    return ACTION
-'''
 
 def places_east(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
@@ -559,10 +499,13 @@ def places_east(update: Update, context: CallbackContext) -> int:
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s chose East with a radius of %d", user.first_name,randomradius)
     logger.info("query results are: %s",query_result.places)
+    print(user.first_name + ": Selected East with radius of " +  str(randomradius))
+    print("Query results are: " + query_result.places)
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
     logger.info("East result: %s",query_result.places[delaytime].name)
+    print(user.first_name + ": Generated index " +  str(randomradius) + " and received result: " + query_result.places[delaytime].name)
 
     for place in query_result.places:        
         query_result.places[delaytime].get_details()
@@ -585,31 +528,6 @@ def places_east(update: Update, context: CallbackContext) -> int:
     )
     return ACTION
 
-'''
-def places_east(update: Update, context: CallbackContext) -> int:
-    user = update.message.from_user
-    logger.info("%s selected East", user.first_name)
-    reply_keyboard = [['Nice!', 'Lmao lame']]
-    eastlist = ['https://g.page/burger-lobster-jewel-changi?share','https://goo.gl/maps/u7DJozX5Knsno5Gq6','https://g.page/elfuegosg?share',
-                'https://g.page/TanukiRawJewel?share','https://goo.gl/maps/Et4cABQ1rMkbe4u5A','https://goo.gl/maps/TLAJvBSW6bY9A4Kw5',
-                'https://goo.gl/maps/GYPWsS6sYiDVa7xQA','https://goo.gl/maps/fGzi5m6hUJcYBSBE9','https://goo.gl/maps/xDcAHz7fWh4aF8kL8',
-                'https://goo.gl/maps/ZCb5nQAVZRrii7Ab9','https://goo.gl/maps/3KhF4bfoRwtr9Tid8','https://goo.gl/maps/CrKBC3PQcaL5sU1M9',
-                'https://g.page/itacho-sushi-bedok-mall?share','https://goo.gl/maps/VoMsTWLwSMMMf1g88','https://goo.gl/maps/HKGCTcCXar1u9jN87',
-                'https://g.page/tonito-latin-american-kitchen?share','https://goo.gl/maps/JU4gyNxV6qY1VXzbA']
-    #bot.sendLocation(@hungrylehbot, latitude=lat, longitude=lon),
-    update.message.reply_text(
-        random.choice(eastlist),
-        reply_markup=ReplyKeyboardRemove(),
-    )    
-    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    sleep(random.choice(TYPESPEED))
-
-    update.message.reply_text(
-        'Can ah?',
-        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
-    )
-    return ACTION
-'''
 def places_west(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s selected West.", user.first_name)
@@ -634,10 +552,13 @@ def places_west(update: Update, context: CallbackContext) -> int:
         radius= randomradius, types=[types.TYPE_FOOD,types.TYPE_RESTAURANT,types.TYPE_CAFE])
     logger.info("%s chose West with a radius of %d", user.first_name,randomradius)
     logger.info("query results are: %s",query_result.places)
+    print(user.first_name + ": Selected West with radius of " +  str(randomradius))
+    print("Query results are: " + query_result.places)
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
     logger.info("West result: %s",query_result.places[delaytime].name)
+    print(user.first_name + ": Generated index " +  str(randomradius) + " and received result: " + query_result.places[delaytime].name)
 
     for place in query_result.places:        
         query_result.places[delaytime].get_details()
@@ -660,31 +581,6 @@ def places_west(update: Update, context: CallbackContext) -> int:
     )
     return ACTION
 
-'''
-def places_west(update: Update, context: CallbackContext) -> int:
-    user = update.message.from_user
-    logger.info("%s selected West.", user.first_name)
-    reply_keyboard = [['Nice!', 'Lmao lame']]
-    westlist = ['https://g.page/HaidilaoIMM?share','https://goo.gl/maps/x5e4Ro9NxgucRHjM8','https://g.page/BrotzeitWestgate?share',
-                'https://goo.gl/maps/UR37N1bBYAHfyPLN8','https://goo.gl/maps/QL6kJ1Hu9MxL3wVQ8','https://goo.gl/maps/JWNgN5uFBGo1FjTx8',
-                'https://goo.gl/maps/9hmwFiL9DC5ugpEN8','https://g.page/ENSakaba-JEM?share','https://goo.gl/maps/qDeTVYc9RxSbU9rv8',
-                'https://goo.gl/maps/Gz2XCxEdNP5oomxu7','https://goo.gl/maps/5VtjHapbwQ714RmF6','https://goo.gl/maps/MENsUrKojYjeVP649',
-                'https://goo.gl/maps/n3zcrLJZsXkZYiwT8','https://goo.gl/maps/v5MJhQGfwMrDy2d9A','https://g.page/OPPABBQ?share',
-                'https://goo.gl/maps/nub6Auhu9TdnB14z7']
-    #bot.sendLocation(@hungrylehbot, latitude=lat, longitude=lon),
-    update.message.reply_text(
-        random.choice(westlist),
-        reply_markup=ReplyKeyboardRemove()
-    )    
-    context.bot.sendChatAction(chat_id=update.message.chat_id, action = telegram.ChatAction.TYPING)
-    sleep(random.choice(TYPESPEED))
-
-    update.message.reply_text(
-        'Can ah?',
-        reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
-    )
-    return ACTION
-'''
 def ending(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     logger.info("%s is exiting", user.first_name)
@@ -696,7 +592,7 @@ def ending(update: Update, context: CallbackContext) -> int:
         'Enjoy your meal!😋😋😋',
         reply_markup=ReplyKeyboardRemove()
     )
-    print(user.first_name + " ended one cycle.")
+    print(user.first_name + ": Ended one cycle.")
     global chose_central, chose_east, chose_west
     global prevrequest
     global prevlocation
@@ -719,7 +615,7 @@ def exit(update: Update, context: CallbackContext) -> int:
     update.message.reply_text(
         'Bye! Chat with me again next time ❤️', reply_markup=ReplyKeyboardRemove()
     )
-    print(user.first_name + " exited.")
+    print(user.first_name + ": Exited.")
     global chose_central, chose_east, chose_west
     global prevrequest
     global prevlocation
@@ -733,7 +629,7 @@ def exit(update: Update, context: CallbackContext) -> int:
 def help(update, context):
     user = update.message.from_user
     """Send a message when the command /help is issued."""
-    print(user.first_name + " viewed help.")
+    print(user.first_name + ": Viewed help.")
 
     update.message.reply_text('Hello! Welcome to Hungry Leh. Patrick will try his best to help you decide what to eat.\n\n'
                                 '🍔Commands\n'

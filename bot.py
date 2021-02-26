@@ -648,6 +648,7 @@ def main():
                     MessageHandler(Filters.regex('^Lmao lame$'), mapquery),
                     MessageHandler(Filters.regex('^Nahh$'), mapquery),
                     MessageHandler(Filters.regex('^Nice!$'), ending),
+                    MessageHandler(Filters.regex('^Send Location!$'), location),
                     CommandHandler('random', places_random),
                     CommandHandler("exit", exit),
                     CommandHandler("help", help)],

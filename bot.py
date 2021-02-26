@@ -65,7 +65,7 @@ def start(update: Update, context: CallbackContext) -> int:
     # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
     
     update.message.reply_text(
-        'Helloo ' + user.first_name + ', this is Patrick.🤓\n',
+        'Helloo ' + user.first_name + ', this is Patrick 🤓\n',
         reply_markup=ReplyKeyboardRemove(),
     )
 
@@ -73,7 +73,8 @@ def start(update: Update, context: CallbackContext) -> int:
     sleep(random.choice(TYPESPEED))
 
     update.message.reply_text(
-        'Not sure where to makan?',
+        'Not sure where to makan?\n'
+        'See /help for a list of commands!',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
     )
     return MYSTATE
@@ -579,11 +580,11 @@ def help(update, context):
     update.message.reply_text('Hello! Welcome to Hungry Leh. Patrick will try his best to help you decide what to eat.\n\n'
                                 '🍔Commands\n'
                                 '/start to start asking\n'
-                                '/random to generate random places (Under Construction)\n'
+                                '/random to generate random places\n'
                                 '/help to access help menu\n'
                                 '/exit to quit\n\n'
                                 '🍣Features\n'
-                                'Patrick will look for random restaurants within 100m radius.\n'
+                                'Patrick will look for random restaurants within a few km radius.\n'
                                 'He will then send you the restaurant name, google maps link and pictures!\n'
                                 'Feel free to hurt his feelings by rejecting his suggestions and ask for a new one.\n\n'
                                 '🍺Future Developments\n'
@@ -610,11 +611,15 @@ def main():
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start),
                     CommandHandler('random', places_random),
-                    CommandHandler('exit', exit)],
+                    CommandHandler('exit', exit),
+                    CommandHandler("help", help)],
         states={
             MYSTATE: [MessageHandler(Filters.regex('^I NEED IDEAS$'), ideas),
                     MessageHandler(Filters.regex('^Not hungry la$'), Nah),
-                    MessageHandler(Filters.regex('^Anything$'), randomplaces)],
+                    MessageHandler(Filters.regex('^Anything$'), randomplaces),
+                    CommandHandler('random', places_random),
+                    CommandHandler("exit", exit),
+                    CommandHandler("help", help)],
             ACTION: [MessageHandler(Filters.regex('^Central$'), places_central), 
                     MessageHandler(Filters.regex('^East$'), places_east),
                     MessageHandler(Filters.regex('^West$'), places_west),
@@ -623,10 +628,13 @@ def main():
                     MessageHandler(Filters.regex('^Lmao lame$'), mapquery),
                     MessageHandler(Filters.regex('^Nahh$'), mapquery),
                     MessageHandler(Filters.regex('^Nice!$'), ending),
-                    #MessageHandler(Filters.text, mapquery),
-                    CommandHandler("exit", exit)],
-            USERLOCATION: [MessageHandler(Filters.text,mapquery)
-                    ],
+                    CommandHandler('random', places_random),
+                    CommandHandler("exit", exit),
+                    CommandHandler("help", help)],
+            USERLOCATION: [MessageHandler(Filters.text,mapquery),
+                        CommandHandler('random', places_random),
+                        CommandHandler("exit", exit),
+                        CommandHandler("help", help)],
         },
         fallbacks=[CommandHandler('exit', exit)],
     )
@@ -635,6 +643,7 @@ def main():
     # on different commands - answer in Telegram
     dp.add_handler(CommandHandler("exit", exit))
     dp.add_handler(CommandHandler("help", help))
+    dp.add_handler(CommandHandler('random', places_random))
 
     # on noncommand i.e message - echo the message on Telegram
     #dp.add_handler(MessageHandler(Filters.text, echo))

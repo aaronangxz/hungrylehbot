@@ -205,7 +205,7 @@ def getLocation(update: Update, context: CallbackContext) -> int:
 
     logger.info("query results: %s",query_result)
     logger.info("query results are: %s",query_result.places)
-    print("Nearby results: " + query_result.places)
+    # print("Nearby results: " + query_result.places)
 
     if query_result.places == []:
                 update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
@@ -313,7 +313,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
 
     delaytime = random.randint(0,len(query_result.places)-1)
     logger.info("delaytime is %f",delaytime)
-    # print("Random index is " + str(delaytime))
+    print("Random index is " + str(delaytime))
     logger.info("query result: %s",query_result.places[delaytime].name)
     print(user.first_name + ": Received result: " + query_result.places[delaytime].name)
 

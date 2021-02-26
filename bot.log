@@ -19605,3 +19605,166 @@
 2021-02-26 04:41:52,129 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 2021-02-26 04:41:52,130 - apscheduler.scheduler - INFO - Scheduler has been shut down
 2021-02-26 04:41:52,317 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 17:57:16,139 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 17:58:27,188 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 17:58:27,188 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 17:58:27,432 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 17:58:43,036 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 17:58:56,420 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 17:59:11,832 - __main__ - INFO - Location of Xuan Ze: 1.286140 / 103.827489
+2021-02-26 17:59:11,832 - __main__ - WARNING - Update "{'update_id': 518680410, 'message': {'message_id': 12691, 'date': 1614333551, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827489, 'latitude': 1.28614}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "can only concatenate str (not "float") to str"
+2021-02-26 17:59:59,980 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 17:59:59,981 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:00:00,115 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:00:01,764 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:00:09,598 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:00:16,768 - __main__ - INFO - Location of Xuan Ze: 1.286144 / 103.827476
+2021-02-26 18:04:21,509 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:04:21,509 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:04:21,685 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:04:23,094 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:04:33,497 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:04:39,434 - __main__ - INFO - Location of Xuan Ze: 1.286127 / 103.827486
+2021-02-26 18:04:40,880 - __main__ - WARNING - Update "{'update_id': 518680418, 'message': {'message_id': 12708, 'date': 1614333879, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827486, 'latitude': 1.286127}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "'list' object has no attribute 'get_details'"
+2021-02-26 18:05:45,665 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:05:45,666 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:05:45,799 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:05:47,293 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:05:57,354 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:06:02,916 - __main__ - INFO - Location of Xuan Ze: 1.286144 / 103.827476
+2021-02-26 18:06:04,420 - __main__ - WARNING - Update "{'update_id': 518680422, 'message': {'message_id': 12717, 'date': 1614333962, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827476, 'latitude': 1.286144}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "'list' object has no attribute 'name'"
+2021-02-26 18:07:25,968 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:07:25,969 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:07:26,122 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:07:27,546 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:07:36,778 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:07:43,477 - __main__ - INFO - Location of Xuan Ze: 1.286164 / 103.827452
+2021-02-26 18:07:44,004 - __main__ - WARNING - Update "{'update_id': 518680426, 'message': {'message_id': 12726, 'date': 1614334063, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827452, 'latitude': 1.286164}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "local variable 'query_result' referenced before assignment"
+2021-02-26 18:08:00,243 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:08:00,244 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:08:00,396 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:08:01,904 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:08:09,796 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:08:15,836 - __main__ - INFO - Location of Xuan Ze: 1.286120 / 103.827513
+2021-02-26 18:08:23,634 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:08:23,634 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:08:23,795 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:09:08,453 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:09:16,461 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:09:21,581 - __main__ - INFO - Location of Xuan Ze: 1.286110 / 103.827496
+2021-02-26 18:09:22,819 - __main__ - INFO - query results are: [<Place name="Singapore", lat=1.3553794, lng=103.8677444>, <Place name="Iliyas Trading", lat=1.2865072, lng=103.8276566>, <Place name="Tiong Bahru Store", lat=1.2861758, lng=103.8275671>, <Place name="ZTP Ginseng Birdnest", lat=1.2864614, lng=103.8270409>, <Place name="K.C Shoe & Key Service Center", lat=1.2865516, lng=103.8274058>, <Place name="The Soup Spoon", lat=1.2862794, lng=103.8277858>, <Place name="Long John Silver's", lat=1.2864848, lng=103.8278475>, <Place name="Shihlin Taiwan Street Snacks", lat=1.2864334, lng=103.8271937>, <Place name="Nippon Steel & Sumikin Engineering Co., Ltd.", lat=1.286287, lng=103.827441>, <Place name="iORA @ Tiong Bahru", lat=1.2863386, lng=103.8271801>, <Place name="AsiaMalls Management Pte Ltd", lat=1.2861932, lng=103.8280005>, <Place name="ARMF (TBP) Pte Ltd", lat=1.286145, lng=103.827342>, <Place name="KFC", lat=1.2866524, lng=103.8273926>, <Place name="TaF.tc", lat=1.2863615, lng=103.828081>, <Place name="Singapore Pools @ NTUC FairPrice (Tiong Bahru Plaza)", lat=1.2862017, lng=103.8273953>, <Place name="Molnlycke Health Care Asia-Pacific Pte Ltd", lat=1.2861478, lng=103.8273671>, <Place name="Rightfocus Consultants Pte Ltd", lat=1.286301, lng=103.827407>, <Place name="Toast Box - Tiong Bahru Plaza", lat=1.2863149, lng=103.8274034>, <Place name="Brow Art Asia", lat=1.2863269, lng=103.8272785>, <Place name="Bukit Merah", lat=1.2819046, lng=103.8239182>]
+2021-02-26 18:09:32,730 - __main__ - WARNING - Update "{'update_id': 518680434, 'message': {'message_id': 12758, 'date': 1614334161, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827496, 'latitude': 1.28611}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "'GooglePlacesSearchResult' object is not subscriptable"
+2021-02-26 18:09:32,730 - __main__ - INFO - Xuan Ze queries map
+2021-02-26 18:09:33,218 - __main__ - INFO - prevlocation is /exit
+2021-02-26 18:09:33,218 - __main__ - INFO - prevlocation is /exit
+2021-02-26 18:09:34,918 - __main__ - INFO - Xuan Ze searched /exit with radius of 561
+2021-02-26 18:09:34,918 - __main__ - INFO - query results are: [<Place name="Wild Honey Mandarin Gallery", lat=1.3019538, lng=103.8368539>, <Place name="SUSHI TEI", lat=1.3036476, lng=103.8349394>, <Place name="Subway", lat=1.3012637, lng=103.8381421>, <Place name="Lawry's The Prime Rib Singapore", lat=1.3018632, lng=103.8369979>, <Place name="Din Tai Fung", lat=1.3039486, lng=103.8351067>, <Place name="Triple Three", lat=1.3023099, lng=103.8362439>, <Place name="Chatterbox", lat=1.3020052, lng=103.8359339>, <Place name="Din Tai Fung", lat=1.3038069, lng=103.833372>, <Place name="Domino's Pizza Killiney", lat=1.2987357, lng=103.8394139>, <Place name="Acid Bar", lat=1.3014469, lng=103.8392718>, <Place name="The Providore Mandarin Gallery", lat=1.3020012, lng=103.8368202>, <Place name="ASTONS Steak & Salad @ The CentrePoint", lat=1.3024094, lng=103.8398276>, <Place name="McDonald's *SCAPE", lat=1.3010571, lng=103.835845>, <Place name="Crystal Cafe, Orchard Grand Court", lat=1.2976196, lng=103.8385005>, <Place name="Imperial Treasure Steamboat Restaurant", lat=1.3041032, lng=103.8323745>, <Place name="Le Pin Wine Bar", lat=1.3013398, lng=103.8413177>, <Place name="Bao Today", lat=1.3013444, lng=103.83785>, <Place name="PAUL", lat=1.3026579, lng=103.8346324>, <Place name="Kiseki Japanese Buffet Restaurant", lat=1.3009059, lng=103.8394917>, <Place name="Yonehachi", lat=1.3022221, lng=103.8352994>]
+2021-02-26 18:09:34,918 - __main__ - INFO - delaytime is 10.000000
+2021-02-26 18:09:34,919 - __main__ - INFO - query result: The Providore Mandarin Gallery
+2021-02-26 18:09:42,072 - __main__ - INFO - User Xuan Ze canceled the conversation.
+2021-02-26 18:09:45,760 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:09:45,761 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:09:45,922 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:12:15,474 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:12:29,798 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:12:41,280 - __main__ - INFO - Location of Xuan Ze: 1.286123 / 103.827500
+2021-02-26 18:12:41,769 - __main__ - WARNING - Update "{'update_id': 518680440, 'message': {'message_id': 12795, 'date': 1614334361, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.8275, 'latitude': 1.286123}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "When rankby = googleplaces.ranking.DISTANCE, name, keyword or types kwargs must be specified."
+2021-02-26 18:13:38,952 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:13:38,952 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:13:39,118 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:13:40,388 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:13:48,640 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:13:54,702 - __main__ - INFO - Location of Xuan Ze: 1.286110 / 103.827496
+2021-02-26 18:13:55,852 - __main__ - INFO - query results are: [<Place name="Singapore", lat=1.3553794, lng=103.8677444>, <Place name="LiNK", lat=1.2861927, lng=103.8275243>, <Place name="CareerWorkz", lat=1.2862075, lng=103.8275221>, <Place name="Bukit Merah", lat=1.2819046, lng=103.8239182>]
+2021-02-26 18:13:57,830 - __main__ - WARNING - Update "{'update_id': 518680444, 'message': {'message_id': 12804, 'date': 1614334434, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827496, 'latitude': 1.28611}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "'GooglePlacesSearchResult' object is not subscriptable"
+2021-02-26 18:14:22,716 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:14:22,716 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:14:22,870 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:16:06,899 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:16:14,151 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:16:20,910 - __main__ - INFO - Location of Xuan Ze: 1.286191 / 103.827459
+2021-02-26 18:16:21,421 - __main__ - WARNING - Update "{'update_id': 518680448, 'message': {'message_id': 12817, 'date': 1614334580, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827459, 'latitude': 1.286191}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "module 'googleplaces.types' has no attribute 'TTYPE_TRAIN_STATION'"
+2021-02-26 18:16:33,845 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:16:33,846 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:16:34,022 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:16:35,304 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:16:42,516 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:16:48,761 - __main__ - INFO - Location of Xuan Ze: 1.286140 / 103.827489
+2021-02-26 18:16:49,672 - __main__ - WARNING - Update "{'update_id': 518680452, 'message': {'message_id': 12826, 'date': 1614334608, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827489, 'latitude': 1.28614}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "empty range for randrange() (0, 0, 0)"
+2021-02-26 18:17:09,139 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:17:09,139 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:17:09,283 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:17:10,763 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:17:18,663 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:17:26,036 - __main__ - INFO - Location of Xuan Ze: 1.286157 / 103.827479
+2021-02-26 18:17:27,166 - __main__ - INFO - query results are: [<Place name="Tiong Bahru Plaza", lat=1.2863129, lng=103.8271402>, <Place name="Tiong Bahru Plaza - Eating & Meeting Place", lat=1.2864763, lng=103.8271508>]
+2021-02-26 18:17:28,243 - __main__ - WARNING - Update "{'update_id': 518680456, 'message': {'message_id': 12835, 'date': 1614334645, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827479, 'latitude': 1.286157}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "'GooglePlacesSearchResult' object is not subscriptable"
+2021-02-26 18:17:59,321 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:17:59,322 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:17:59,466 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:19:19,289 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:19:28,301 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:19:36,599 - __main__ - INFO - Location of Xuan Ze: 1.285904 / 103.827863
+2021-02-26 18:19:37,732 - __main__ - INFO - query results are: [<Place name="Tiong Bahru Plaza", lat=1.2863129, lng=103.8271402>]
+2021-02-26 18:19:38,220 - __main__ - WARNING - Update "{'update_id': 518680460, 'message': {'message_id': 12847, 'date': 1614334776, 'chat': {'id': 291235864, 'type': 'private', 'username': 'zzeexxuuaann', 'first_name': 'Xuan Ze'}, 'entities': [], 'caption_entities': [], 'photo': [], 'location': {'longitude': 103.827863, 'latitude': 1.285904}, 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 'from': {'id': 291235864, 'first_name': 'Xuan Ze', 'is_bot': False, 'username': 'zzeexxuuaann', 'language_code': 'en'}}}" caused error "'GooglePlacesSearchResult' object is not subscriptable"
+2021-02-26 18:19:45,299 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:19:45,300 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:19:45,465 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:21:50,434 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:22:50,150 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69160>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:55,152 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'ConnectTimeoutError(<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f692b0>, 'Connection to api.telegram.org timed out. (connect timeout=5.0)')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:55,154 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69400>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:55,156 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69550>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2021-02-26 18:22:55,156 - __main__ - WARNING - Update "None" caused error "urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69550>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+2021-02-26 18:22:56,161 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69820>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:56,162 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f699a0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:56,163 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69b20>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:56,164 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69ca0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2021-02-26 18:22:56,164 - __main__ - WARNING - Update "None" caused error "urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69ca0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+2021-02-26 18:22:57,669 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69760>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:57,670 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69f10>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:57,671 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f7d0a0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:57,672 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f7d220>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2021-02-26 18:22:57,672 - __main__ - WARNING - Update "None" caused error "urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f7d220>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+2021-02-26 18:22:59,927 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69640>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:59,928 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f7d490>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:59,931 - telegram.vendor.ptb_urllib3.urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None)) after connection broken by 'NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f7d5e0>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known')': /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates
+2021-02-26 18:22:59,932 - telegram.ext.updater - ERROR - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69a60>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2021-02-26 18:22:59,932 - __main__ - WARNING - Update "None" caused error "urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot1613440161:AAFlP57hml8a-bwMn1t3NDlNUuL9DbIVGjY/getUpdates (Caused by NewConnectionError('<telegram.vendor.ptb_urllib3.urllib3.connection.VerifiedHTTPSConnection object at 0x7fcaa6f69a60>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))"
+2021-02-26 18:23:06,254 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:23:06,254 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:23:06,417 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:23:07,873 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:23:14,816 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:23:21,486 - __main__ - INFO - Location of Xuan Ze: 1.286106 / 103.827510
+2021-02-26 18:23:22,423 - __main__ - INFO - query results are: [<Place name="Tiong Bahru Plaza", lat=1.2863129, lng=103.8271402>, <Place name="Tiong Bahru Plaza - Eating & Meeting Place", lat=1.2864763, lng=103.8271508>]
+2021-02-26 18:24:35,089 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:24:35,090 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:24:35,245 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:24:36,419 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:24:46,964 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:24:53,338 - __main__ - INFO - Location of Xuan Ze: 1.286130 / 103.827473
+2021-02-26 18:24:53,905 - __main__ - INFO - query results are: [<Place name="Tiong Bahru Plaza", lat=1.2863129, lng=103.8271402>, <Place name="Tiong Bahru Plaza - Eating & Meeting Place", lat=1.2864763, lng=103.8271508>]
+2021-02-26 18:26:49,908 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:26:49,908 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:26:50,051 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:26:51,447 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:27:00,615 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:27:07,688 - __main__ - INFO - Location of Xuan Ze: 1.286147 / 103.827462
+2021-02-26 18:27:08,304 - __main__ - INFO - query results are: [<Place name="Tiong Bahru Plaza", lat=1.2863129, lng=103.8271402>, <Place name="Tiong Bahru Plaza - Eating & Meeting Place", lat=1.2864763, lng=103.8271508>]
+2021-02-26 18:27:58,691 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:27:58,691 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:27:58,819 - telegram.ext.updater - WARNING - Exiting immediately!
+2021-02-26 18:28:00,591 - apscheduler.scheduler - INFO - Scheduler started
+2021-02-26 18:28:11,896 - __main__ - INFO - Xuan Ze needs ideas
+2021-02-26 18:28:20,637 - __main__ - INFO - Location of Xuan Ze: 1.286130 / 103.827473
+2021-02-26 18:28:21,661 - __main__ - INFO - query results are: [<Place name="Tiong Bahru Plaza", lat=1.2863129, lng=103.8271402>, <Place name="Tiong Bahru Plaza - Eating & Meeting Place", lat=1.2864763, lng=103.8271508>]
+2021-02-26 18:28:43,739 - __main__ - INFO - Xuan Ze selected random.
+2021-02-26 18:28:46,545 - __main__ - INFO - Xuan Ze chose random with a radius of 2194
+2021-02-26 18:28:46,546 - __main__ - INFO - query results are: [<Place name="305 Family Restaurant", lat=1.3628599, lng=103.8332079>, <Place name="Subway", lat=1.3548349, lng=103.8308272>, <Place name="Arcadia Chinese Restaurant 雅園餐館", lat=1.3346203, lng=103.809965>, <Place name="Nakaichi Food Singapore Pte Ltd", lat=1.351961, lng=103.8351257>, <Place name="Burger King", lat=1.3545251, lng=103.8315792>, <Place name="Pandelicious Everyday", lat=1.3533717, lng=103.8355342>, <Place name="PocoLoco", lat=1.3522812, lng=103.8349765>, <Place name="Indulge", lat=1.3532377, lng=103.8350614>, <Place name="Subway", lat=1.3417021, lng=103.8374627>, <Place name="Neethe restaurant", lat=1.37087, lng=103.8381829>, <Place name="The Black Sheep Cafe", lat=1.3534784, lng=103.8355969>, <Place name="Swensen's", lat=1.3547006, lng=103.8307848>, <Place name="Kiat Lim Vegetarian Food 吉林素食", lat=1.3708514, lng=103.8380106>, <Place name="R.R Indian Food Stall", lat=1.3714518, lng=103.8369688>, <Place name="KFC", lat=1.354637, lng=103.830935>, <Place name="GRUB", lat=1.3649722, lng=103.8358919>, <Place name="Pick & Bite - Thomson Plaza", lat=1.354733, lng=103.83095>, <Place name="Mufiz Restaurant Pte Ltd (Halal Food)", lat=1.366513, lng=103.841474>, <Place name="Fatboy's the Burger Bar", lat=1.3515683, lng=103.8353692>, <Place name="Nam Kee Chicken Rice Restaurant", lat=1.3518671, lng=103.8352634>]
+2021-02-26 18:28:46,546 - __main__ - INFO - delaytime is 18.000000
+2021-02-26 18:28:46,546 - __main__ - INFO - random result: Fatboy's the Burger Bar
+2021-02-26 18:28:53,774 - __main__ - INFO - User Xuan Ze canceled the conversation.
+2021-02-26 18:28:58,163 - telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+2021-02-26 18:28:58,163 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2021-02-26 18:28:58,331 - telegram.ext.updater - WARNING - Exiting immediately!

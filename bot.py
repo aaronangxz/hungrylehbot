@@ -95,6 +95,10 @@ def ideas(update: Update, context: CallbackContext) -> int:
 
 def location(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
+    update.message.reply_text(
+        'Send me you location!\n'
+        'Attach > Location > Send My Location'
+    )
     return USERLOCATION
 
 def getLocation(update: Update, context: CallbackContext) -> int:
@@ -108,9 +112,29 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     logger.info(
         "Location of %s: %f / %f", user.first_name, user_location.latitude, user_location.longitude
     )
-    update.message.reply_text(
-        'Your location is ' + user_location.latitude + ', ' + user_location.longitude
-    )
+    # update.message.reply_text(
+    #     'Your location is ' + str(user_location.latitude) + ', ' + str(user_location.longitude)
+    # )
+    
+    query_result = google_places.nearby_search(
+        lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},
+        radius= 100,types=[types.TYPE_SHOPPING_MALL,types.TYPE_TRAIN_STATION])
+    # delaytime = random.randint(0,len(query_result.places)-1)
+
+    logger.info("query results are: %s",query_result.places)
+
+    for place in query_result.places:        
+            # query_result.places.get_details()
+            update.message.reply_text('Let me guess..you are at ' + query_result.places[0].name + ' now? 🤔\n')
+            break
+
+    update.message.reply_text('Oops this is all I can do now, check back later!\n'
+                                'See /help for a list of other commands!')
+    # logger.info("query results: %s",query_result[0].name)
+    # global prevlocation
+    # global prevrequest
+    # prevlocation = query_result.places[0].name 
+    # prevrequest = prevlocation
     return ConversationHandler.END
 
 def maprequest(update: Update, context: CallbackContext) -> int:

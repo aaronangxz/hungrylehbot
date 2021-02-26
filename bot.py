@@ -130,7 +130,7 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     logger.info("query results are: %s",query_result.places)
     # print("Nearby results: " + query_result.places[delaytime].name)
 
-    if query_result.places == []:
+    if query_result == []:
         update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
         logger.info("No Results")
         print(user.first_name + " received no results.")

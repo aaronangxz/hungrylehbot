@@ -120,8 +120,8 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     print(user.first_name + " sent location: " + str(user_location.latitude) + " ," + str(user_location.longitude))
 
     query_result = google_places.nearby_search(
-        lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},radius= 100, types = [types.TYPE_RESTAURANT,types.TYPE_SHOPPING_MALL,types.TYPE_DEPARTMENT_STORE, types.TYPE_TRAIN_STATION])
-    # delaytime = random.randint(0,len(query_result.places)-1)
+        lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},radius= 20, types = [types.TYPE_RESTAURANT,types.TYPE_SHOPPING_MALL,types.TYPE_DEPARTMENT_STORE, types.TYPE_TRAIN_STATION])
+    delaytime = random.randint(0,len(query_result.places)-1)
 
     logger.info("query results: %s",query_result)
     logger.info("query results are: %s",query_result.places)
@@ -135,9 +135,9 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     else: 
         for place in query_result.places:        
             # query_result.places.get_details()
-            update.message.reply_text('Let me guess..you are at ' + query_result.places[0].name + ' now? 🤔\n')
-            logger.info("Return results: %s",query_result.places[0])
-            print(user.first_name + " received result: " + query_result.places[0].name)
+            update.message.reply_text('Let me guess..you are at ' + query_result.places[delaytime].name + ' now? 🤔\n')
+            logger.info("Return results: %s",query_result.places[delaytime])
+            print(user.first_name + " received result: " + query_result.places[delaytime].name)
             break
     
     update.message.reply_text('Oops this is all I can do now, check back later!\n'

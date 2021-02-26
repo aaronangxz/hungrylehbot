@@ -43,6 +43,7 @@ logger = logging.getLogger(__name__)
 MYSTATE, ACTION, USERLOCATION= range(3)
 
 def start(update: Update, context: CallbackContext) -> int:
+    user = update.message.from_user
     giflink = 'https://media.giphy.com/media/12uXi1GXBibALC/giphy.gif'
     # update.message.reply_animation(
     #     animation=giflink, 
@@ -64,7 +65,7 @@ def start(update: Update, context: CallbackContext) -> int:
     # bot.sendDocument(chat_id = -1001613440161,Document=giflink),
     
     update.message.reply_text(
-        'Helloo, this is Patrick.🤓\n',
+        'Helloo ' + user.first_name + ', this is Patrick.🤓\n',
         reply_markup=ReplyKeyboardRemove(),
     )
 
@@ -103,8 +104,8 @@ def maprequest(update: Update, context: CallbackContext) -> int:
                                  '(Type the name of the nearest mall / mrt / area)\n\n'
                                  'I am slowly learning and slightly smarter now!\n'
                                  'Try short names e.g. JEM, NEX, 313 etc. 😛\n\n'
-                                 'I will search through places within a 2km radius so sometimes it will be a little bit far away from the you 🥺\n'
-                                 'And also I have a tiny brain, forgive me if I repeat the same places 🙈' )
+                                 'I will search through places up to a 1km radius so sometimes it will be a little bit far away from you 🥺\n'
+                                 'And also I have a tiny brain, forgive me if I repeat the same place multiple times 🙈' )
     # global prevrequest 
     
     return USERLOCATION
@@ -168,7 +169,7 @@ def mapquery(update: Update, context: CallbackContext) -> int:
 
     if chose_central == True or chose_east == True or chose_west == True:
         randomradius = random.randint(100,5000)
-    else: randomradius = random.randint(100,2000)
+    else: randomradius = random.randint(100,1000)
 
     query_result = google_places.nearby_search(
         location= (prevlocation + ' Singapore'),

@@ -135,7 +135,7 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     # global prevrequest
     # prevlocation = query_result.places[0].name 
     # prevrequest = prevlocation
-    return ConversationHandler.END
+    return ConversationHandler.END 
 
 def maprequest(update: Update, context: CallbackContext) -> int:
     update.message.reply_text('Where are you?\n'

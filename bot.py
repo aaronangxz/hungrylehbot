@@ -131,14 +131,16 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     # print("Nearby results: " + query_result.places[delaytime].name)
 
     if len(query_result.places) == 0:
-        update.message.reply_text('Hmmm, I can\'t find any landmarks near you..')
+        update.message.reply_text('Hmmm, I can\'t find any landmarks near you..',
+                                reply_markup=ReplyKeyboardRemove())
         logger.info("No Results")
         print(user.first_name + " received no results.")
     else: 
         for place in query_result.places:        
             delaytime = random.randint(0,len(query_result.places)-1)
             # query_result.places.get_details()
-            update.message.reply_text('Let me guess..you are near to ' + query_result.places[delaytime].name + ' now? 🤔\n')
+            update.message.reply_text('Let me guess..you are near to ' + query_result.places[delaytime].name + ' now? 🤔\n',
+                                    reply_markup=ReplyKeyboardRemove())
             logger.info("Return results: %s",query_result.places[delaytime])
             print(user.first_name + " received result: " + query_result.places[delaytime].name)
             break

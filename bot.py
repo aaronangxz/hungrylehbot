@@ -32,7 +32,7 @@ google_places = GooglePlaces(GOOGLEAPI)
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ["TOKEN"]
 bot = telegram.Bot(token=TOKEN)
-TYPESPEED = [0.25,0.5,0.75,1]
+TYPESPEED = [0.2,0.4,0.6]
 QUERYDELAY = [0,1,2,3,4,5,6,7,8,9]
 
 # Enable logging
@@ -100,7 +100,7 @@ def location(update: Update, context: CallbackContext) -> int:
     keyboard=[[location_keyboard]]
     user = update.message.from_user
     update.message.reply_text(
-        '[EXPERIMENTAL]\n'
+        '⚠️ EXPERIMENTAL ⚠️\n'
         'Send me your location!',
         reply_markup=ReplyKeyboardMarkup(keyboard, one_time_keyboard=True),
     )
@@ -123,9 +123,8 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     print(user.first_name + " sent location: " + str(user_location.latitude) + " ," + str(user_location.longitude))
     # print("Place: " + user_location.name)
     query_result = google_places.nearby_search(
-        lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},radius= 50, types = [types.TYPE_SHOPPING_MALL,types.TYPE_DEPARTMENT_STORE, types.TYPE_TRAIN_STATION])
+        lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},radius= 100, types = [types.TYPE_SHOPPING_MALL, types.TYPE_TRAIN_STATION])
     
-
     logger.info("query results: %s",query_result)
     logger.info("query results are: %s",query_result.places)
     # print("Nearby results: " + query_result.places[delaytime].name)

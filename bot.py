@@ -123,7 +123,7 @@ def getLocation(update: Update, context: CallbackContext) -> int:
     print(user.first_name + " sent location: " + str(user_location.latitude) + " ," + str(user_location.longitude))
     # print("Place: " + user_location.name)
     query_result = google_places.nearby_search(
-        lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},radius= 100, types = [types.TYPE_SHOPPING_MALL, types.TYPE_TRAIN_STATION])
+        lat_lng={'lat': user_location.latitude, 'lng': user_location.longitude},radius= 250, types = [types.TYPE_SHOPPING_MALL, types.TYPE_TRAIN_STATION])
     
     logger.info("query results: %s",query_result)
     logger.info("query results are: %s",query_result.places)

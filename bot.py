@@ -101,7 +101,7 @@ def location(update: Update, context: CallbackContext) -> int:
     user = update.message.from_user
     update.message.reply_text(
         '⚠️ EXPERIMENTAL ⚠️\n'
-        'Send me your location!',
+        'Send me your location! I will try to figure out where are you now 😳 (Only MRT stations and Malls)',
         reply_markup=ReplyKeyboardMarkup(keyboard, one_time_keyboard=True),
     )
     return USERLOCATION

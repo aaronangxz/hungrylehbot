@@ -3,7 +3,7 @@
 
 ![Image of MEME](https://i.imgur.com/bDrj8Pd.png)
 
-Patrick is here to save the day!
+Patrick is here to save the day! <br>Your go to resolution to resolve your dating woes when you have no idea of what to eat😇
 
 <h2>What Can I Do</h2>
 <h3>/start</h3> To start chatting with me!

@@ -6,7 +6,12 @@
 Patrick is here to save the day! <br>Your go to resolution to resolve your dating woes when you have no idea of what to eat😇
 
 <h2>What Can I Do</h2>
+<img src="commands.jpg" alt="commands" width="400"/>
+<br>
 <h3>/start</h3> To start chatting with me!
+<br>
+<img src="start.jpg" alt="start" width="400"/>
+
 <h3>/random</h3> Generate a random place, regardless of location.
 <h3>/help</h3> View the help menu.
 <h3>/exit</h3> To stop chatting with me :'(<br>

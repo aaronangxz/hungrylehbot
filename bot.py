@@ -224,8 +224,8 @@ def mapquery(update: Update, context: CallbackContext) -> int:
     repeat = True
 
     if chose_central == True or chose_east == True or chose_west == True:
-        randomradius = random.randint(100,5000)
-    else: randomradius = random.randint(100,1000)
+        randomradius = random.randint(1,5000)
+    else: randomradius = random.randint(1,500)
 
     query_result = google_places.nearby_search(
         location= (prevlocation + ' Singapore'),

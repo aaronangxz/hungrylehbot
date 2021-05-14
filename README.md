@@ -6,20 +6,19 @@
 Patrick is here to save the day! <br>Your go to resolution to resolve your dating woes when you have no idea of what to eat😇
 
 <h2>What Can I Do</h2>
-<img src="commands.jpg" alt="commands" width="400"/>
+<img src="commands.jpg" alt="commands" width="500"/>
 <br>
 <h3>/start</h3> To start chatting with me!
 <br>
-<img src="./imgs/start.png" alt="start" width="400"/>
-<br>
+<img src="./imgs/start.png" alt="start" width="500"/>
+
 <h3>Tell me where do you want to go</h3> and I will do the work :)
 <br>
-<img src="./imgs/location.png" alt="location" width="400"/>
-<img src="./imgs/result.png" alt="result" width="400"/>
+<img src="./imgs/location.png" alt="location" width="500"/><img src="./imgs/result.png" alt="result" width="500"/>
 
 <h3>/random</h3> Generate a random place, regardless of location.
 <br>
-<img src="./imgs/random.png" alt="random" width="400"/>
+<img src="./imgs/random.png" alt="random" width="500"/>
 <h3>/help</h3> View the help menu.
 <h3>/exit</h3> To stop chatting with me :'(<br>
 

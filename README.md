@@ -10,15 +10,15 @@ Patrick is here to save the day! <br>Your go to resolution to resolve your datin
 <br>
 <h3>/start</h3> To start chatting with me!
 <br>
-<img src="./imgs/start.png" alt="start" width="500"/>
+<img src="./imgs/start.png" alt="start" width="300"/>
 
 <h3>Tell me where do you want to go</h3> and I will do the work :)
 <br>
-<img src="./imgs/location.png" alt="location" width="500"/><img src="./imgs/result.png" alt="result" width="500"/>
+<img src="./imgs/location.png" alt="location" width="300"/><img src="./imgs/result.png" alt="result" width="300"/>
 
 <h3>/random</h3> Generate a random place, regardless of location.
 <br>
-<img src="./imgs/random.png" alt="random" width="500"/>
+<img src="./imgs/random.png" alt="random" width="300"/>
 <h3>/help</h3> View the help menu.
 <h3>/exit</h3> To stop chatting with me :'(<br>
 

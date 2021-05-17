@@ -1,9 +1,14 @@
 
 <h1>HungryLeh Bot</h1>
 
+![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/aaronangxz/hungrylehbot?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/aaronangxz/hungrylehbot?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/aaronangxz/hungrylehbot?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/aaronangxz/hungrylehbot?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/aaronangxz/hungrylehbot?style=for-the-badge)
 ![Image of MEME](https://i.imgur.com/bDrj8Pd.png)
 
-Patrick is here to save the day! <br>Your go to resolution to resolve your dating woes when you have no idea of what to eat😇
+Patrick is here to save the day! <br>Your go to resolution to resolve your dating woes when you have no idea of what to eat 😇
 
 <h2>What Can I Do</h2>
 <img src="commands.jpg" alt="commands" width="500"/>

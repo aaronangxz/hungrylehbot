@@ -33,7 +33,6 @@ PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ["TOKEN"]
 bot = telegram.Bot(token=TOKEN)
 TYPESPEED = [0.2,0.4,0.6]
-QUERYDELAY = [0,1,2,3,4,5,6,7,8,9]
 
 # Enable logging
 logging.basicConfig(filename='bot.log',format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',

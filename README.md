@@ -13,7 +13,6 @@ Patrick is here to save the day! <br>Your go to resolution to resolve your datin
 
 <h2>What Can I Do</h2>
 <img src="commands.jpg" alt="commands" width="500"/>
-<br>
 <h3>/start</h3> To start chatting with me!
 <br>
 <img src="./imgs/start.png" alt="start" width="400"/>

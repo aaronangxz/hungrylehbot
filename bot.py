@@ -19,6 +19,8 @@ from telegram.ext import (
     CallbackContext,
 )
 from googleplaces import GooglePlaces, types, lang
+from dbhelper import DBHelper
+db = DBHelper()
 
 prevlocation = None
 prevrequest = None

@@ -63,4 +63,7 @@ Python Google Places<br>
 https://github.com/slimkrazy/python-google-places
 
 
-## Future Developments
+## Developments
+* Addition of SQLite database for multi user
+* Enhance query results
+* Omit duplicated results

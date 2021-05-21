@@ -6,22 +6,22 @@ class DBHelper:
         self.conn = sqlite3.connect(dbname)
 
     def setup(self):
-        stmt = "CREATE TABLE IF NOT EXISTS items (description text)"
+        stmt = "CREATE TABLE IF NOT EXISTS uniqueuser (description text)"
         self.conn.execute(stmt)
         self.conn.commit()
 
-    def add_item(self, item_text):
-        stmt = "INSERT INTO items (description) VALUES (?)"
-        args = (item_text, )
+    def add_user(self, user_id):
+        stmt = "INSERT INTO uniqueuser (description) VALUES (?)"
+        args = (user_id, )
         self.conn.execute(stmt, args)
         self.conn.commit()
 
-    def delete_item(self, item_text):
-        stmt = "DELETE FROM items WHERE description = (?)"
-        args = (item_text, )
+    def delete_user(self, user_id):
+        stmt = "DELETE FROM uniqueuser WHERE description = (?)"
+        args = (user_id, )
         self.conn.execute(stmt, args)
         self.conn.commit()
 
-    def get_items(self):
-        stmt = "SELECT description FROM items"
+    def get_user(self):
+        stmt = "SELECT description FROM uniqueuser"
         return [x[0] for x in self.conn.execute(stmt)]

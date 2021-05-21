@@ -12,7 +12,7 @@
 <br>
 <p align="center"><img src="https://i.imgur.com/bDrj8Pd.png"></p>
 <p align = "center">Patrick is here to save the day!</p>
-<p align = "center">Your go to resolution to resolve your dating woes when you have no idea of what to eat 😇 - Iris, 2021</p>
+<p align = "center">"Your go to resolution to resolve your dating woes when you have no idea of what to eat 😇" - Iris, 2021</p>
 
 ***
 

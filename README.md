@@ -17,7 +17,7 @@
 ***
 
 ## What Can I Do
-<img src="commands.jpg" alt="commands" width="500"/><br>
+<img src="commands.jpg" alt="commands" width="400"/><br>
 
 * [Start](#Start)
 
@@ -40,7 +40,7 @@
 
 <h3>Tell me where do you want to go</h3> and I will do the work :)
 <br>
-<p float="left">
+<p float="left"> 
   <img src="./imgs/location.png" width="400" />
   <img src="./imgs/result.png" width="400" /> 
 </p>

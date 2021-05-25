@@ -75,8 +75,9 @@ def start(update: Update, context: CallbackContext) -> int:
     sleep(random.choice(TYPESPEED))
 
     update.message.reply_text(
-        'Not sure where to makan?\n'
-        'See /help for a list of commands!',
+        'Not sure where to dabao?\n'
+        'See /help for a list of commands!\n'
+        'Updates: https://www.gov.sg/article/additional-restrictions-under-phase-2--heightened-alert',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True),
     )
     return MYSTATE

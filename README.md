@@ -56,10 +56,10 @@
 <h3>/exit</h3> To stop chatting with me :'(<br>
 
 ## Packages
-Python Telegram Bot<br>
+Python Telegram Bot v13.5<br>
 https://github.com/python-telegram-bot/python-telegram-bot
 <br>
-Python Google Places<br>
+Python Google Places 1.4.2<br>
 https://github.com/slimkrazy/python-google-places
 
 

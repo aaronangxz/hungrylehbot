@@ -19,7 +19,7 @@ class DBHelper:
         self.conn.execute(stmt, args)
         self.conn.commit()
 
-    #TBC
+    #Maybe not necessary
     def delete_user(self, user_id):
         stmt = "DELETE FROM uniqueuser WHERE description = (?)"
         args = (user_id, )

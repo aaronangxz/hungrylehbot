@@ -34,7 +34,7 @@ google_places = GooglePlaces(GOOGLEAPI)
 PORT = int(os.environ.get('PORT', 5000))
 TOKEN = os.environ["TOKEN"]
 bot = telegram.Bot(token=TOKEN)
-TYPESPEED = [0.2,0.4,0.6]
+TYPESPEED = [0.2,0.3,0.4]
 
 # Enable logging
 logging.basicConfig(filename='bot.log',format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
